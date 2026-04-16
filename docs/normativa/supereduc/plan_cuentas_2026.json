@@ -1,0 +1,4106 @@
+{
+  "metadata": {
+    "fuente": "Manual de Cuentas para la Rendición de Recursos destinados a Educación 2026",
+    "autoridad": "Superintendencia de Educación (SuperEduc)",
+    "version": "2026",
+    "fecha_publicacion": "Enero 2026",
+    "total_cuentas_operativas": 239,
+    "total_cuentas_agrupadoras": 27,
+    "subvenciones_validas": [
+      "General",
+      "General AC",
+      "SEP",
+      "SEP AC",
+      "PIE",
+      "Pro Retención",
+      "Internado",
+      "Refuerzo Educativo",
+      "Mantenimiento"
+    ],
+    "libros_rendicion": [
+      "Remuneraciones",
+      "Compras y Otros Gastos",
+      "Compras y Otros Gastos - Honorarios",
+      "Honorarios",
+      "Ingresos"
+    ],
+    "tipos_documento": {
+      "BOL": "Boleta de Ventas y Servicios",
+      "BOLE": "Boleta Electrónica",
+      "BOLEX": "Boleta Electrónica Exenta",
+      "BOLEC": "Boleta Electrónica del Contribuyente",
+      "BOLH": "Boleta de Honorarios",
+      "BOLHE": "Boleta de Honorarios Electrónica",
+      "BHE": "Boleta de Honorarios Electrónica",
+      "BPST": "Boleta de Prestación de Servicios de Terceros",
+      "BPSTE": "Boleta de Prestación de Servicios de Terceros Electrónica",
+      "FAC": "Factura",
+      "FACE": "Factura Electrónica",
+      "FACEX": "Factura Electrónica Exenta",
+      "FACEL": "Factura Electrónica de Ventas y Servicios",
+      "FIN": "Finiquito",
+      "ODE": "Orden de Egreso",
+      "DOCEX": "Documento Exento",
+      "NOTACRE": "Nota de Crédito",
+      "NOTADEB": "Nota de Débito"
+    }
+  },
+  "cuentas_operativas": [
+    {
+      "codigo": "310 103",
+      "codigo_plano": "310103",
+      "nombre": "INCREMENTO DE ZONA",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310100"
+    },
+    {
+      "codigo": "310 106",
+      "codigo_plano": "310106",
+      "nombre": "LEY N° 19.410",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310100"
+    },
+    {
+      "codigo": "310 108",
+      "codigo_plano": "310108",
+      "nombre": "APORTE POR FONDOS DE BECAS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310100"
+    },
+    {
+      "codigo": "310 109",
+      "codigo_plano": "310109",
+      "nombre": "APORTE POR GRATUIDAD",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310100"
+    },
+    {
+      "codigo": "310 110",
+      "codigo_plano": "310110",
+      "nombre": "DIFERENCIA SUBVENCIÓN MÍNIMA",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310100"
+    },
+    {
+      "codigo": "310 201",
+      "codigo_plano": "310201",
+      "nombre": "ASIGNACIÓN DESEMPEÑO CONDICIONES DIFÍCILES DOCENTES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310200"
+    },
+    {
+      "codigo": "310 202",
+      "codigo_plano": "310202",
+      "nombre": "BONIFICACIÓN COMPENSATORIA, ART.3°, LEY N° 19.200",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310200"
+    },
+    {
+      "codigo": "310 203",
+      "codigo_plano": "310203",
+      "nombre": "UMP COMPLEMENTARIA INCISO 2° ART.10° LEY N° 19.278",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310200"
+    },
+    {
+      "codigo": "310 204",
+      "codigo_plano": "310204",
+      "nombre": "SNED DOCENTES ART. 40° DFL N° 2/98 ED.",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310200"
+    },
+    {
+      "codigo": "310 205",
+      "codigo_plano": "310205",
+      "nombre": "SNED ASISTENTES EDUCACIÓN LEY N° 20.244 Y ART. 45 LEY N° 21.109.",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310200"
+    },
+    {
+      "codigo": "310 206",
+      "codigo_plano": "310206",
+      "nombre": "BONIFICACIÓN DE PROFESORES ENCARGADOS, LEY N° 19.715, ART.13°",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310200"
+    },
+    {
+      "codigo": "310 207",
+      "codigo_plano": "310207",
+      "nombre": "BRP TÍTULO Y MENCIÓN LEY N° 20.158",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310200"
+    },
+    {
+      "codigo": "310 208",
+      "codigo_plano": "310208",
+      "nombre": "ASIGNACIÓN DE EXCELENCIA PEDAGÓGICA (AEP) LEY N° 19.715",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310200"
+    },
+    {
+      "codigo": "310 209",
+      "codigo_plano": "310209",
+      "nombre": "ASIGNACIÓN VARIABLE DE DESEMPEÑO INDIVIDUAL ART.17, LEY N° 19.933",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310200"
+    },
+    {
+      "codigo": "310 210",
+      "codigo_plano": "310210",
+      "nombre": "ASIGNACIÓN POR DESEMPEÑO COLECTIVO, ART.18, LEY N°19.933",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310200"
+    },
+    {
+      "codigo": "310 211",
+      "codigo_plano": "310211",
+      "nombre": "ASIGNACIÓN DESEMPEÑO CONDICIONES DIFÍCILES DE LOS ASISTENTES DE LA",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310200"
+    },
+    {
+      "codigo": "310 212",
+      "codigo_plano": "310212",
+      "nombre": "ASIGNACIÓN DE RECONOCIMIENTO EN ESTABLECIMIENTOS DE ALTA",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310200"
+    },
+    {
+      "codigo": "310 213",
+      "codigo_plano": "310213",
+      "nombre": "ASIGNACIÓN POR TRAMO DE DESARROLLO PROFESIONAL",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310200"
+    },
+    {
+      "codigo": "310 214",
+      "codigo_plano": "310214",
+      "nombre": "ASIGNACIÓN DE RECONOCIMIENTO EN ESTABLECIMIENTOS DE ALTA",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310200"
+    },
+    {
+      "codigo": "310 215",
+      "codigo_plano": "310215",
+      "nombre": "BONO RENTAS MENORES ASISTENTES DE LA EDUCACIÓN",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310200"
+    },
+    {
+      "codigo": "310 301",
+      "codigo_plano": "310301",
+      "nombre": "SUBVENCIÓN ESCOLAR PREFERENCIAL, LEY N° 20.248",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310300"
+    },
+    {
+      "codigo": "310 302",
+      "codigo_plano": "310302",
+      "nombre": "SUBVENCIÓN POR CONCENTRACIÓN, ART. 16 DE LA LEY N° 20.248",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310300"
+    },
+    {
+      "codigo": "310 303",
+      "codigo_plano": "310303",
+      "nombre": "APORTE ADICIONAL SEP",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310300"
+    },
+    {
+      "codigo": "310 304",
+      "codigo_plano": "310304",
+      "nombre": "APORTE EXTRAORDINARIO SEP",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310300"
+    },
+    {
+      "codigo": "310 305",
+      "codigo_plano": "310305",
+      "nombre": "SUBVENCIÓN ANUAL DE APOYO AL MANTENIMIENTO, ART. 37°, DFL(ED) N° 2,",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310300"
+    },
+    {
+      "codigo": "310 306",
+      "codigo_plano": "310306",
+      "nombre": "SUBVENCIÓN EDUCACIONAL PRORETENCIÓN",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310300"
+    },
+    {
+      "codigo": "310 307",
+      "codigo_plano": "310307",
+      "nombre": "SUBVENCIÓN DE INTERNADO",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310300"
+    },
+    {
+      "codigo": "310 308",
+      "codigo_plano": "310308",
+      "nombre": "SUBVENCIÓN DE REFUERZO EDUCATIVO, ART. 39, D.F.L. (ED) N° 2, DE 1998",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310300"
+    },
+    {
+      "codigo": "310 401",
+      "codigo_plano": "310401",
+      "nombre": "RELIQUIDACIONES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310400"
+    },
+    {
+      "codigo": "310 402",
+      "codigo_plano": "310402",
+      "nombre": "RELIQUIDACIONES FINANCIAMIENTO COMPARTIDO",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310400"
+    },
+    {
+      "codigo": "310 403",
+      "codigo_plano": "310403",
+      "nombre": "PAGOS MANUALES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310400"
+    },
+    {
+      "codigo": "310 404",
+      "codigo_plano": "310404",
+      "nombre": "DEVOLUCIONES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310400"
+    },
+    {
+      "codigo": "310 406",
+      "codigo_plano": "310406",
+      "nombre": "AJUSTES POR PAGO REZAGADO SEP",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310400"
+    },
+    {
+      "codigo": "310 501",
+      "codigo_plano": "310501",
+      "nombre": "REINTEGROS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310500"
+    },
+    {
+      "codigo": "310 502",
+      "codigo_plano": "310502",
+      "nombre": "MULTAS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310500"
+    },
+    {
+      "codigo": "310 503",
+      "codigo_plano": "310503",
+      "nombre": "DESCUENTOS POR DISCREPANCIAS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310500"
+    },
+    {
+      "codigo": "310 504",
+      "codigo_plano": "310504",
+      "nombre": "DESCUENTOS POR DERECHOS DE ESCOLARIDAD",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310500"
+    },
+    {
+      "codigo": "310 505",
+      "codigo_plano": "310505",
+      "nombre": "DESCUENTOS POR FINANCIAMIENTO COMPARTIDO",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310500"
+    },
+    {
+      "codigo": "310 506",
+      "codigo_plano": "310506",
+      "nombre": "DESCUENTO POR ANTICIPO SUBVENCIÓN LEY N°20.822",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310500"
+    },
+    {
+      "codigo": "310 507",
+      "codigo_plano": "310507",
+      "nombre": "OTROS DESCUENTOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310500"
+    },
+    {
+      "codigo": "310 508",
+      "codigo_plano": "310508",
+      "nombre": "GARANTÍA FONDO INFRAESTRUCTURA ESCOLAR (GIE)",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310500"
+    },
+    {
+      "codigo": "310 509",
+      "codigo_plano": "310509",
+      "nombre": "RETENCIONES JUDICIALES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310500"
+    },
+    {
+      "codigo": "310 510",
+      "codigo_plano": "310510",
+      "nombre": "RETENCIONES PREVISIONALES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310500"
+    },
+    {
+      "codigo": "310 511",
+      "codigo_plano": "310511",
+      "nombre": "OTRAS RETENCIONES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310500"
+    },
+    {
+      "codigo": "310 512",
+      "codigo_plano": "310512",
+      "nombre": "PRIVACIONES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310500"
+    },
+    {
+      "codigo": "310 601",
+      "codigo_plano": "310601",
+      "nombre": "BONO DE ESCOLARIDAD Y BONO ADICIONAL",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310600"
+    },
+    {
+      "codigo": "310 602",
+      "codigo_plano": "310602",
+      "nombre": "AGUINALDO DE NAVIDAD",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310600"
+    },
+    {
+      "codigo": "310 603",
+      "codigo_plano": "310603",
+      "nombre": "AGUINALDO DE FIESTAS PATRIAS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310600"
+    },
+    {
+      "codigo": "310 604",
+      "codigo_plano": "310604",
+      "nombre": "BONO ESPECIAL",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310600"
+    },
+    {
+      "codigo": "310 605",
+      "codigo_plano": "310605",
+      "nombre": "BONO VACACIONES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310600"
+    },
+    {
+      "codigo": "310 606",
+      "codigo_plano": "310606",
+      "nombre": "BONO DESEMPEÑO LABORAL",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310600"
+    },
+    {
+      "codigo": "310 607",
+      "codigo_plano": "310607",
+      "nombre": "OTROS BONOS FISCALES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310600"
+    },
+    {
+      "codigo": "310 702",
+      "codigo_plano": "310702",
+      "nombre": "OTROS INGRESOS FISCALES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310700"
+    },
+    {
+      "codigo": "310 704",
+      "codigo_plano": "310704",
+      "nombre": "BONIFICACIÓN ADICIONAL POR ANTIGÜEDAD ART. N° 6 LEY N° 20.652",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310700"
+    },
+    {
+      "codigo": "310 705",
+      "codigo_plano": "310705",
+      "nombre": "APORTE FISCAL EXTRAORDINARIO POR RETIRO VOLUNTARIO PROFESIONALES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310700"
+    },
+    {
+      "codigo": "310 706",
+      "codigo_plano": "310706",
+      "nombre": "APORTE COMPLEMENTARIO POR RETIRO VOLUNTARIO PROFESIONALES DE LA",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310700"
+    },
+    {
+      "codigo": "310 708",
+      "codigo_plano": "310708",
+      "nombre": "BONIFICACIÓN ADICIONAL, LEY N° 20.964 DE RETIRO VOLUNTARIO DE",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310700"
+    },
+    {
+      "codigo": "310 709",
+      "codigo_plano": "310709",
+      "nombre": "APOYO AL SISTEMA DE TRANSPORTE ESCOLAR RURAL (DECRETO SUPREMO",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310700"
+    },
+    {
+      "codigo": "310 710",
+      "codigo_plano": "310710",
+      "nombre": "ANTICIPO POR SUBVENCIÓN",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310700"
+    },
+    {
+      "codigo": "310 711",
+      "codigo_plano": "310711",
+      "nombre": "INGRESOS POR CONVENIO A LICEOS BICENTENARIO",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310700"
+    },
+    {
+      "codigo": "310 712",
+      "codigo_plano": "310712",
+      "nombre": "INGRESOS POR PLANES DE SUPERACIÓN PROFESIONAL (PSP)",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310700"
+    },
+    {
+      "codigo": "310 801",
+      "codigo_plano": "310801",
+      "nombre": "MATRÍCULAS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310800"
+    },
+    {
+      "codigo": "310 806",
+      "codigo_plano": "310806",
+      "nombre": "ARRIENDO DE INSTALACIONES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310800"
+    },
+    {
+      "codigo": "310 807",
+      "codigo_plano": "310807",
+      "nombre": "OTROS INGRESOS DE LA OPERACIÓN",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310800"
+    },
+    {
+      "codigo": "310 808",
+      "codigo_plano": "310808",
+      "nombre": "INGRESO FINANCIAMIENTO COMPARTIDO (FICOM)",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310800"
+    },
+    {
+      "codigo": "310 809",
+      "codigo_plano": "310809",
+      "nombre": "INGRESO POR RECUPERACIÓN JUDICIAL DE FINANCIAMIENTO COMPARTIDO",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310800"
+    },
+    {
+      "codigo": "310 901",
+      "codigo_plano": "310901",
+      "nombre": "CENTROS DE PADRES Y APODERADOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310900"
+    },
+    {
+      "codigo": "310 902",
+      "codigo_plano": "310902",
+      "nombre": "INSTITUCIONES Y EMPRESAS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310900"
+    },
+    {
+      "codigo": "310 903",
+      "codigo_plano": "310903",
+      "nombre": "PERSONAS NATURALES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310900"
+    },
+    {
+      "codigo": "310 904",
+      "codigo_plano": "310904",
+      "nombre": "OTRAS DONACIONES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310900"
+    },
+    {
+      "codigo": "311 101",
+      "codigo_plano": "311101",
+      "nombre": "INTERESES Y REAJUSTES DEL MERCADO DE CAPITALES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "311100"
+    },
+    {
+      "codigo": "311 102",
+      "codigo_plano": "311102",
+      "nombre": "OTROS INGRESOS FINANCIEROS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "311100"
+    },
+    {
+      "codigo": "311 103",
+      "codigo_plano": "311103",
+      "nombre": "OTROS INGRESOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "311100"
+    },
+    {
+      "codigo": "311 104",
+      "codigo_plano": "311104",
+      "nombre": "INGRESOS APOYO INICIO ACTIVIDAD",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "311100"
+    },
+    {
+      "codigo": "311 105",
+      "codigo_plano": "311105",
+      "nombre": "REINTEGRO LICENCIAS MÉDICAS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "311100"
+    },
+    {
+      "codigo": "311 106",
+      "codigo_plano": "311106",
+      "nombre": "APORTE MUNICIPAL",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "311100"
+    },
+    {
+      "codigo": "410 100",
+      "codigo_plano": "410100",
+      "nombre": "GASTOS REMUNERACIONALES",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 101",
+      "codigo_plano": "410101",
+      "nombre": "SUELDO BASE",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 102",
+      "codigo_plano": "410102",
+      "nombre": "HORAS EXTRAS",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 103",
+      "codigo_plano": "410103",
+      "nombre": "LEY N° 19.933",
+      "subvenciones": [
+        "General",
+        "PIE"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 105",
+      "codigo_plano": "410105",
+      "nombre": "BRP TÍTULO Y MENCIÓN LEY N° 20.158",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 106",
+      "codigo_plano": "410106",
+      "nombre": "LEY N° 19.464 ASISTENTES (INCLUYE INTERNADOS) (ART.5° TRANS.DFL N°",
+      "subvenciones": [
+        "General",
+        "Internado"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 107",
+      "codigo_plano": "410107",
+      "nombre": "ASIGNACIÓN DESEMPEÑO CONDICIONES DIFÍCILES DOCENTES",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 108",
+      "codigo_plano": "410108",
+      "nombre": "BONIFICACIÓN COMPENSATORIA ART 3°, LEY N° 19.200",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 109",
+      "codigo_plano": "410109",
+      "nombre": "SNED DOCENTES ART.40 DFL N° 2/98 ED.",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 111",
+      "codigo_plano": "410111",
+      "nombre": "UMP COMPLEMENTARIA INCISO 2° ART. 10°, LEY N° 19.278",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 112",
+      "codigo_plano": "410112",
+      "nombre": "BONIFICACIÓN DE PROFESORES ENCARGADOS, LEY N° 19.715, ART. 13",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 113",
+      "codigo_plano": "410113",
+      "nombre": "ASIGNACIÓN DE EXCELENCIA PEDAGÓGICA (AEP) LEY N° 19.715",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 114",
+      "codigo_plano": "410114",
+      "nombre": "ASIGNACIÓN VARIABLE DE DESEMPEÑO INDIVIDUAL ART.17 Y 17 BIS DE LA LEY",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 115",
+      "codigo_plano": "410115",
+      "nombre": "ASIGNACIÓN POR DESEMPEÑO COLECTIVO, ART.18, LEY N° 19.933",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 116",
+      "codigo_plano": "410116",
+      "nombre": "ASIGNACIONES",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 117",
+      "codigo_plano": "410117",
+      "nombre": "PAGO OTROS BONOS DOCENTES FISCALES",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 118",
+      "codigo_plano": "410118",
+      "nombre": "PAGO OTROS BONOS ASISTENTES DE LA EDUCACIÓN FISCALES",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 119",
+      "codigo_plano": "410119",
+      "nombre": "COLACIÓN Y MOVILIZACIÓN",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 120",
+      "codigo_plano": "410120",
+      "nombre": "DEVOLUCIÓN BONOS REMUNERACIONALES FISCALES",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "ODE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 121",
+      "codigo_plano": "410121",
+      "nombre": "BONOS ACORDADOS CON LA ENTIDAD SOSTENEDORA",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 123",
+      "codigo_plano": "410123",
+      "nombre": "ASIGNACIÓN DESEMPEÑO CONDICIONES DIFÍCILES ASISTENTES DE LA",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 124",
+      "codigo_plano": "410124",
+      "nombre": "BONO INCENTIVO AL DESEMPEÑO LEY N° 20.248 ART. 8° N° 4",
+      "subvenciones": [
+        "SEP"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 125",
+      "codigo_plano": "410125",
+      "nombre": "PLANILLA COMPLEMENTARIA",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 126",
+      "codigo_plano": "410126",
+      "nombre": "BONO EXTRAORDINARIO (SAE )",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 127",
+      "codigo_plano": "410127",
+      "nombre": "ASIGNACIÓN DE RECONOCIMIENTO EN ESTABLECIMIENTOS DE ALTA",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 128",
+      "codigo_plano": "410128",
+      "nombre": "ASIGNACIÓN POR TRAMO DE DESARROLLO PROFESIONAL",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 129",
+      "codigo_plano": "410129",
+      "nombre": "PLANILLA SUPLEMENTARIA , ARTÍCULOS 19° Y 33° TRANS ITORIOS DE LA LEY N°",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 130",
+      "codigo_plano": "410130",
+      "nombre": "ASIGNACIÓN DE RECONOCIMIENTO EN ESTABLECIMIENTOS DE ALTA",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 131",
+      "codigo_plano": "410131",
+      "nombre": "BONO RENTAS MENORES ASISTENTES DE LA EDUCACIÓN",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410100"
+    },
+    {
+      "codigo": "410 200",
+      "codigo_plano": "410200",
+      "nombre": "GASTOS BONOS Y AGUINALDOS LEY DE REAJUSTE SECTOR PÚBLICO",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410200"
+    },
+    {
+      "codigo": "410 201",
+      "codigo_plano": "410201",
+      "nombre": "PAGO POR BONO ESCOLAR Y ADICIONAL",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410200"
+    },
+    {
+      "codigo": "410 202",
+      "codigo_plano": "410202",
+      "nombre": "PAGO AGUINALDO NAVIDAD",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410200"
+    },
+    {
+      "codigo": "410 203",
+      "codigo_plano": "410203",
+      "nombre": "PAGO AGUINALDO DE FIESTAS PATRIAS",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410200"
+    },
+    {
+      "codigo": "410 204",
+      "codigo_plano": "410204",
+      "nombre": "PAGO BONO ESPECIAL",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410200"
+    },
+    {
+      "codigo": "410 205",
+      "codigo_plano": "410205",
+      "nombre": "PAGO BONO VACACIONES",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410200"
+    },
+    {
+      "codigo": "410 206",
+      "codigo_plano": "410206",
+      "nombre": "PAGO BONO DESEMPEÑO LABORAL",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410200"
+    },
+    {
+      "codigo": "410 207",
+      "codigo_plano": "410207",
+      "nombre": "OTROS BONOS NO IMPONIBLES LEY DE REAJUSTE",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410200"
+    },
+    {
+      "codigo": "410 208",
+      "codigo_plano": "410208",
+      "nombre": "DEVOLUCIÓN BONOS LEY DE REAJUSTE",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "ODE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410200"
+    },
+    {
+      "codigo": "410 300",
+      "codigo_plano": "410300",
+      "nombre": "OTROS GASTOS EN PERSONAL",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "FIN"
+      ],
+      "tipo": "GASTO",
+      "familia": "410300"
+    },
+    {
+      "codigo": "410 301",
+      "codigo_plano": "410301",
+      "nombre": "INDEMNIZACIONES Y/O FERIADO PROPORCIONAL",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "FIN"
+      ],
+      "tipo": "GASTO",
+      "familia": "410300"
+    },
+    {
+      "codigo": "410 302",
+      "codigo_plano": "410302",
+      "nombre": "VIÁTICOS",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "ODE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410300"
+    },
+    {
+      "codigo": "410 303",
+      "codigo_plano": "410303",
+      "nombre": "BONO RETIRO ASISTENTES EDUCACIÓN",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "FIN"
+      ],
+      "tipo": "GASTO",
+      "familia": "410300"
+    },
+    {
+      "codigo": "410 304",
+      "codigo_plano": "410304",
+      "nombre": "OTROS GASTOS EN PERSONAL",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos – Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "410300"
+    },
+    {
+      "codigo": "410 306",
+      "codigo_plano": "410306",
+      "nombre": "BONIFICACIÓN ADICIONAL POR ANTIGÜEDAD",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "FIN"
+      ],
+      "tipo": "GASTO",
+      "familia": "410300"
+    },
+    {
+      "codigo": "410 307",
+      "codigo_plano": "410307",
+      "nombre": "APORTE FISCAL EXTRAORDINARIO POR RETIRO VOLUNTARIO PROFESIONALES",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "FIN",
+        "ODE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410300"
+    },
+    {
+      "codigo": "410 308",
+      "codigo_plano": "410308",
+      "nombre": "APORTE COMPLEMENTARIO POR RETIRO VOLUNTARIO PROFESIONALES DE LA",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "FIN",
+        "ODE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410300"
+    },
+    {
+      "codigo": "410 309",
+      "codigo_plano": "410309",
+      "nombre": "SALA CUNA",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos – Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "410300"
+    },
+    {
+      "codigo": "410 312",
+      "codigo_plano": "410312",
+      "nombre": "BONIFICACIÓN POR RETIRO VOLUNTARIO AL PERSONAL ASISTENTE DE LA",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "ODE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410300"
+    },
+    {
+      "codigo": "410 400",
+      "codigo_plano": "410400",
+      "nombre": "APORTES PREVISIONALES",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410400"
+    },
+    {
+      "codigo": "410 401",
+      "codigo_plano": "410401",
+      "nombre": "SEGURO DE ACCIDENTE DEL TRABAJO",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410400"
+    },
+    {
+      "codigo": "410 402",
+      "codigo_plano": "410402",
+      "nombre": "SEGURO DE CESANTÍA",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410400"
+    },
+    {
+      "codigo": "410 403",
+      "codigo_plano": "410403",
+      "nombre": "SEGURO DE INVALIDEZ Y SOBREVIVENCIA (SIS)",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410400"
+    },
+    {
+      "codigo": "410 404",
+      "codigo_plano": "410404",
+      "nombre": "OTROS APORTES PREVISIONALES DE LA ENTIDAD SOSTENEDORA",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Remuneraciones",
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410400"
+    },
+    {
+      "codigo": "410 501",
+      "codigo_plano": "410501",
+      "nombre": "ASISTENCIA TÉCNICO PEDAGÓGICA EDUCATIVA (REGISTRO ATE)",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410500"
+    },
+    {
+      "codigo": "410 502",
+      "codigo_plano": "410502",
+      "nombre": "ACCIONES FORMATIVAS Y PERFECCIONAMIENTO DE RR.HH.",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410500"
+    },
+    {
+      "codigo": "410 503",
+      "codigo_plano": "410503",
+      "nombre": "ACTIVIDADES PARA EL FORTALECIMIENTO DE LOS OBJETIVOS DE",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410500"
+    },
+    {
+      "codigo": "410 601",
+      "codigo_plano": "410601",
+      "nombre": "IMPLEMENTOS DE LABORATORIO",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Pro Retención",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX",
+        "DOCEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "410600"
+    },
+    {
+      "codigo": "410 602",
+      "codigo_plano": "410602",
+      "nombre": "IMPLEMENTOS DEPORTIVOS",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Pro Retención",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX",
+        "DOCEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "410600"
+    },
+    {
+      "codigo": "410 603",
+      "codigo_plano": "410603",
+      "nombre": "INSTRUMENTOS MUSICALES Y ARTÍSTICOS",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Pro Retención",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX",
+        "DOCEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "410600"
+    },
+    {
+      "codigo": "410 604",
+      "codigo_plano": "410604",
+      "nombre": "RECURSOS AUDIOVISUALES Y SOFTWARE EDUCATIVO",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX",
+        "DOCEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "410600"
+    },
+    {
+      "codigo": "410 605",
+      "codigo_plano": "410605",
+      "nombre": "MATERIAL Y RECURSOS DIDÁCTICOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410600"
+    },
+    {
+      "codigo": "410 606",
+      "codigo_plano": "410606",
+      "nombre": "BIBLIOTECAS, LIBROS Y REVISTAS",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX",
+        "DOCEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "410600"
+    },
+    {
+      "codigo": "410 607",
+      "codigo_plano": "410607",
+      "nombre": "EVENTOS EDUCATIVOS Y CULTURALES",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos – Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "410600"
+    },
+    {
+      "codigo": "410 608",
+      "codigo_plano": "410608",
+      "nombre": "EVALUACIÓN DIAGNÓSTICA",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos – Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "BOLHE",
+        "FACEL"
+      ],
+      "tipo": "GASTO",
+      "familia": "410600"
+    },
+    {
+      "codigo": "410 609",
+      "codigo_plano": "410609",
+      "nombre": "OTROS GASTOS EN RECURSOS DE APRENDIZAJE",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX",
+        "DOCEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "410600"
+    },
+    {
+      "codigo": "410 700",
+      "codigo_plano": "410700",
+      "nombre": "GASTOS EN EQUIPAMIENTO DE APOYO PEDAGÓGICO",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "DOCEX",
+        "NOTACRE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410700"
+    },
+    {
+      "codigo": "410 701",
+      "codigo_plano": "410701",
+      "nombre": "EQUIPOS DE FOTOGRAFÍA Y FILMACIÓN",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "DOCEX",
+        "NOTACRE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410700"
+    },
+    {
+      "codigo": "410 702",
+      "codigo_plano": "410702",
+      "nombre": "PIZARRAS INTERACTIVAS",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "DOCEX",
+        "NOTACRE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410700"
+    },
+    {
+      "codigo": "410 703",
+      "codigo_plano": "410703",
+      "nombre": "EQUIPOS INFORMÁTICOS Y LICENCIAS",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Mantenimiento",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "DOCEX",
+        "NOTACRE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410700"
+    },
+    {
+      "codigo": "410 704",
+      "codigo_plano": "410704",
+      "nombre": "EQUIPOS REPRODUCTORES DE IMAGEN",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Mantenimiento",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "DOCEX",
+        "NOTACRE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410700"
+    },
+    {
+      "codigo": "410 705",
+      "codigo_plano": "410705",
+      "nombre": "EQUIPOS MULTICOPIADORES",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "DOCEX",
+        "NOTACRE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410700"
+    },
+    {
+      "codigo": "410 706",
+      "codigo_plano": "410706",
+      "nombre": "EQUIPOS DE AMPLIFICACIÓN Y SONIDO",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "DOCEX",
+        "NOTACRE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410700"
+    },
+    {
+      "codigo": "410 707",
+      "codigo_plano": "410707",
+      "nombre": "OTROS GASTOS EN EQUIPAMIENTO DE APOYO PEDAGÓGICO",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410700"
+    },
+    {
+      "codigo": "410 801",
+      "codigo_plano": "410801",
+      "nombre": "UNIFORMES Y VESTUARIO",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "Pro Retención",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos – Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "BPST"
+      ],
+      "tipo": "GASTO",
+      "familia": "410800"
+    },
+    {
+      "codigo": "410 802",
+      "codigo_plano": "410802",
+      "nombre": "OTROS GASTOS ALUMNOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410800"
+    },
+    {
+      "codigo": "410 803",
+      "codigo_plano": "410803",
+      "nombre": "TALLERES EXTRAPROGRAMÁTICOS",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "Pro Retención",
+        "Internado"
+      ],
+      "libro_rendicion": "Honorarios",
+      "documentos_habilitados": [
+        "BOLH",
+        "BHE",
+        "BOLHE",
+        "BPST",
+        "BPSTE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410800"
+    },
+    {
+      "codigo": "410 804",
+      "codigo_plano": "410804",
+      "nombre": "CONTRATACIÓN DE APOYO DE ESPECIALISTAS",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "PIE",
+        "Pro Retención"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOLH",
+        "BHE",
+        "FACE",
+        "ODE",
+        "BOLEX",
+        "BOLHE",
+        "FACEX",
+        "BPST",
+        "BPSTE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410800"
+    },
+    {
+      "codigo": "410 805",
+      "codigo_plano": "410805",
+      "nombre": "APOYO AL ESTUDIANTE",
+      "subvenciones": [
+        "Pro Retención"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "410800"
+    },
+    {
+      "codigo": "410 806",
+      "codigo_plano": "410806",
+      "nombre": "ÚTILES ESCOLARES",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "Pro Retención"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "DOCEX",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "410800"
+    },
+    {
+      "codigo": "410 901",
+      "codigo_plano": "410901",
+      "nombre": "TRANSPORTE ESCOLAR",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410900"
+    },
+    {
+      "codigo": "410 902",
+      "codigo_plano": "410902",
+      "nombre": "MATERIALES DE OFICINA",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP AC",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "DOCEX",
+        "NOTACRE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410900"
+    },
+    {
+      "codigo": "410 903",
+      "codigo_plano": "410903",
+      "nombre": "REPRODUCCIÓN DE DOCUMENTOS",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "410900"
+    },
+    {
+      "codigo": "410 904",
+      "codigo_plano": "410904",
+      "nombre": "ALIMENTACIÓN",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "Pro Retención",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410900"
+    },
+    {
+      "codigo": "410 905",
+      "codigo_plano": "410905",
+      "nombre": "INSUMOS COMPUTACIONALES",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "DOCEX",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "410900"
+    },
+    {
+      "codigo": "410 906",
+      "codigo_plano": "410906",
+      "nombre": "COMBUSTIBLE Y PEAJES",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "NOTACRE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410900"
+    },
+    {
+      "codigo": "410 907",
+      "codigo_plano": "410907",
+      "nombre": "MATERIALES Y ÚTILES DE ASEO",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "410900"
+    },
+    {
+      "codigo": "410 908",
+      "codigo_plano": "410908",
+      "nombre": "PUBLICIDAD",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos – Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410900"
+    },
+    {
+      "codigo": "410 909",
+      "codigo_plano": "410909",
+      "nombre": "PASAJES",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOLE",
+        "FACE",
+        "ODE",
+        "BOLEX",
+        "FACEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "410900"
+    },
+    {
+      "codigo": "410 910",
+      "codigo_plano": "410910",
+      "nombre": "OTROS GASTOS DE OPERACIÓN",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "410900"
+    },
+    {
+      "codigo": "410 911",
+      "codigo_plano": "410911",
+      "nombre": "GASTOS MUNICIPALES , IMPUESTOS Y DONACIONES ORIGINADAS EN",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "ODE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410900"
+    },
+    {
+      "codigo": "410 912",
+      "codigo_plano": "410912",
+      "nombre": "CRÉDITOS FINANCIEROS",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "ODE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410900"
+    },
+    {
+      "codigo": "410 913",
+      "codigo_plano": "410913",
+      "nombre": "GASTOS BANCARIOS",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "410900"
+    },
+    {
+      "codigo": "410 914",
+      "codigo_plano": "410914",
+      "nombre": "DEVOLUCIÓN APOYO INICIO ACTIVIDAD",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "ODE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410900"
+    },
+    {
+      "codigo": "410 916",
+      "codigo_plano": "410916",
+      "nombre": "CONTRATACIÓN DE SEGUROS",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "FAC",
+        "FACEL",
+        "FACEX",
+        "NOTACRE",
+        "NOTADEB",
+        "ODE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410900"
+    },
+    {
+      "codigo": "410 917",
+      "codigo_plano": "410917",
+      "nombre": "DEVOLUCIONES DE FONDOS PÚBLICOS",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "ODE"
+      ],
+      "tipo": "GASTO",
+      "familia": "410900"
+    },
+    {
+      "codigo": "410 918",
+      "codigo_plano": "410918",
+      "nombre": "TRASLADO DE ESTUDIANTES POR ACTIVIDAD ESCOLAR",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "Pro Retención"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos – Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "BOLHE",
+        "FACEL"
+      ],
+      "tipo": "GASTO",
+      "familia": "410900"
+    },
+    {
+      "codigo": "411 000",
+      "codigo_plano": "411000",
+      "nombre": "SERVICIOS BÁSICOS",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "Pro Retención"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411000"
+    },
+    {
+      "codigo": "411 001",
+      "codigo_plano": "411001",
+      "nombre": "INTERNET",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "Pro Retención"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411000"
+    },
+    {
+      "codigo": "411 002",
+      "codigo_plano": "411002",
+      "nombre": "AGUA",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "411000"
+    },
+    {
+      "codigo": "411 004",
+      "codigo_plano": "411004",
+      "nombre": "ELECTRICIDAD",
+      "subvenciones": [],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411000"
+    },
+    {
+      "codigo": "411 005",
+      "codigo_plano": "411005",
+      "nombre": "SERVICIO DE CORRESPONDENCIA (CORREOS)",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "ODE",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411000"
+    },
+    {
+      "codigo": "411 006",
+      "codigo_plano": "411006",
+      "nombre": "TELEFONÍA (MÓVIL Y FIJA)",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411000"
+    },
+    {
+      "codigo": "411 007",
+      "codigo_plano": "411007",
+      "nombre": "COMBUSTIBLE O FUENTE DE ENERGÍA PARA CALEFACCIÓN",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "ODE",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411000"
+    },
+    {
+      "codigo": "411 008",
+      "codigo_plano": "411008",
+      "nombre": "OTROS GASTOS SERVICIOS BÁSICOS",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "ODE",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411000"
+    },
+    {
+      "codigo": "411 100",
+      "codigo_plano": "411100",
+      "nombre": "SERVICIOS GENERALES",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOLH",
+        "FAC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411100"
+    },
+    {
+      "codigo": "411 101",
+      "codigo_plano": "411101",
+      "nombre": "CONTRATACIÓN SERVICIOS DE ASEO Y JARDINERÍA",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOLH",
+        "FAC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411100"
+    },
+    {
+      "codigo": "411 102",
+      "codigo_plano": "411102",
+      "nombre": "CONTRATACIÓN SERVICIOS DE SEGURIDAD",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOLH",
+        "FAC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411100"
+    },
+    {
+      "codigo": "411 103",
+      "codigo_plano": "411103",
+      "nombre": "CONTRATACIÓN OTROS SERVICIOS EXTERNOS",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP AC"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "BOLHE",
+        "FACEL",
+        "FACEX",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411100"
+    },
+    {
+      "codigo": "411 200",
+      "codigo_plano": "411200",
+      "nombre": "MULTAS E INTERESES",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "ODE"
+      ],
+      "tipo": "GASTO",
+      "familia": "411200"
+    },
+    {
+      "codigo": "411 201",
+      "codigo_plano": "411201",
+      "nombre": "MULTAS E INTERESES FISCALES Y PREVISIONALES",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "ODE"
+      ],
+      "tipo": "GASTO",
+      "familia": "411200"
+    },
+    {
+      "codigo": "411 400",
+      "codigo_plano": "411400",
+      "nombre": "ARRIENDOS DE INMUEBLES",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "411400"
+    },
+    {
+      "codigo": "411 401",
+      "codigo_plano": "411401",
+      "nombre": "ARRIENDO DE LOCAL ESCOLAR",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "411400"
+    },
+    {
+      "codigo": "411 402",
+      "codigo_plano": "411402",
+      "nombre": "ARRIENDO DE OFICINAS Y/O DEPENDENCIAS DE ADMINISTRACIÓN",
+      "subvenciones": [
+        "General AC",
+        "SEP AC",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411400"
+    },
+    {
+      "codigo": "411 403",
+      "codigo_plano": "411403",
+      "nombre": "ARRIENDO DE OTROS BIENES INMUEBLES",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "Pro Retención",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "411400"
+    },
+    {
+      "codigo": "411 404",
+      "codigo_plano": "411404",
+      "nombre": "MEJORAS ÚTILES Y NECESARIAS EN LOCAL ESCOLAR ARRENDADO",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "411400"
+    },
+    {
+      "codigo": "411 500",
+      "codigo_plano": "411500",
+      "nombre": "ARRIENDOS DE BIENES MUEBLES",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411500"
+    },
+    {
+      "codigo": "411 501",
+      "codigo_plano": "411501",
+      "nombre": "ARRIENDO DE EQUIPOS INFORMÁTICOS",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411500"
+    },
+    {
+      "codigo": "411 502",
+      "codigo_plano": "411502",
+      "nombre": "ARRIENDO DE MAQUINARIAS Y EQUIPOS",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411500"
+    },
+    {
+      "codigo": "411 503",
+      "codigo_plano": "411503",
+      "nombre": "ARRIENDO DE MOBILIARIO",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411500"
+    },
+    {
+      "codigo": "411 504",
+      "codigo_plano": "411504",
+      "nombre": "ARRIENDO DE OTROS BIENES MUEBLES",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411500"
+    },
+    {
+      "codigo": "411 601",
+      "codigo_plano": "411601",
+      "nombre": "MANTENIMIENTO Y REPARACIÓN DE INFRAESTRUCTURA",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE"
+      ],
+      "tipo": "GASTO",
+      "familia": "411600"
+    },
+    {
+      "codigo": "411 602",
+      "codigo_plano": "411602",
+      "nombre": "CONSTRUCCIÓN DE INFRAESTRUCTURA (OBRA GRUESA)",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOLH",
+        "FAC",
+        "FACE",
+        "BOLHE",
+        "FACEL",
+        "FACEX",
+        "BPST",
+        "BPSTE"
+      ],
+      "tipo": "GASTO",
+      "familia": "411600"
+    },
+    {
+      "codigo": "411 603",
+      "codigo_plano": "411603",
+      "nombre": "TERMINACIONES DE INFRAESTRUCTURA",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411600"
+    },
+    {
+      "codigo": "411 604",
+      "codigo_plano": "411604",
+      "nombre": "INSTALACIONES ELÉCTRICAS, ILUMINACIÓN Y SISTEMAS DE CALEFACCIÓN",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411600"
+    },
+    {
+      "codigo": "411 605",
+      "codigo_plano": "411605",
+      "nombre": "INSTALACIONES DE GAS",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "FACEX",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411600"
+    },
+    {
+      "codigo": "411 606",
+      "codigo_plano": "411606",
+      "nombre": "INSTALACIONES DE AGUA",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411600"
+    },
+    {
+      "codigo": "411 607",
+      "codigo_plano": "411607",
+      "nombre": "ALCANTARILLADOS O POZOS SÉPTICOS",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411600"
+    },
+    {
+      "codigo": "411 608",
+      "codigo_plano": "411608",
+      "nombre": "CIERRES PERIMETRALES Y OBRAS COMPLEMENTARIAS",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411600"
+    },
+    {
+      "codigo": "411 609",
+      "codigo_plano": "411609",
+      "nombre": "SERVICIOS HIGIÉNICOS",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411600"
+    },
+    {
+      "codigo": "411 610",
+      "codigo_plano": "411610",
+      "nombre": "ELIMINACIÓN DE BARRERAS ARQUITÉCTONICAS DE MENOR ENVERGADURA",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE"
+      ],
+      "tipo": "GASTO",
+      "familia": "411600"
+    },
+    {
+      "codigo": "411 700",
+      "codigo_plano": "411700",
+      "nombre": "GASTOS MANTENCIÓN Y REPARACIÓN DE BIENES MUEBLES",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "BOLHE"
+      ],
+      "tipo": "GASTO",
+      "familia": "411700"
+    },
+    {
+      "codigo": "411 701",
+      "codigo_plano": "411701",
+      "nombre": "MANTENCIÓN Y REPARACIÓN DE BIENES MUEBLES",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "BOLHE"
+      ],
+      "tipo": "GASTO",
+      "familia": "411700"
+    },
+    {
+      "codigo": "411 702",
+      "codigo_plano": "411702",
+      "nombre": "REPUESTOS, MANTENIMIENTO Y REPARACIÓN DE VEHÍCULOS",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "BOLHE"
+      ],
+      "tipo": "GASTO",
+      "familia": "411700"
+    },
+    {
+      "codigo": "411 703",
+      "codigo_plano": "411703",
+      "nombre": "MANTENCIÓN Y REPARACIÓN DE EQUIPOS COMPUTACIONALES",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "BOLHE",
+        "FACEL",
+        "FACEX",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411700"
+    },
+    {
+      "codigo": "411 704",
+      "codigo_plano": "411704",
+      "nombre": "MANTENCIÓN Y REPARACIÓN DE MOBILIARIO ESCOLAR",
+      "subvenciones": [
+        "General",
+        "SEP",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "BOLHE",
+        "FACEL",
+        "FACEX",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411700"
+    },
+    {
+      "codigo": "411 800",
+      "codigo_plano": "411800",
+      "nombre": "ADQUISICIÓN DE BIENES MUEBLES E INMUEBLES",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BHE",
+        "ODE",
+        "BOLEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "411800"
+    },
+    {
+      "codigo": "411 801",
+      "codigo_plano": "411801",
+      "nombre": "ADQUISICIÓN DE BIENES INMUEBLES",
+      "subvenciones": [
+        "General"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "documentos_habilitados": [
+        "BHE",
+        "ODE",
+        "BOLEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "411800"
+    },
+    {
+      "codigo": "411 802",
+      "codigo_plano": "411802",
+      "nombre": "ADQUISICIÓN DE MOBILIARIO",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX",
+        "DOCEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "411800"
+    },
+    {
+      "codigo": "411 803",
+      "codigo_plano": "411803",
+      "nombre": "ADQUISICIÓN DE VEHÍCULO",
+      "subvenciones": [
+        "General",
+        "General AC"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "FAC",
+        "FACE",
+        "ODE",
+        "FACEL",
+        "FACEX",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "tipo": "GASTO",
+      "familia": "411800"
+    },
+    {
+      "codigo": "411 804",
+      "codigo_plano": "411804",
+      "nombre": "ADQUISICIÓN DE OTROS BIENES MUEBLES NO PEDAGÓGICOS",
+      "subvenciones": [
+        "General",
+        "General AC",
+        "SEP AC",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "libro_rendicion": "Compras y Otros Gastos",
+      "documentos_habilitados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX"
+      ],
+      "tipo": "GASTO",
+      "familia": "411800"
+    },
+    {
+      "codigo": "700 001",
+      "codigo_plano": "700001",
+      "nombre": "EGRESOS POR RECURSOS CENTRALIZADOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "700000"
+    },
+    {
+      "codigo": "800 001",
+      "codigo_plano": "800001",
+      "nombre": "INGRESOS POR RECURSOS CENTRALIZADOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "800000"
+    },
+    {
+      "codigo": "900 001",
+      "codigo_plano": "900001",
+      "nombre": "INGRESOS POR GASTOS NO ACEPTADOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "900000"
+    },
+    {
+      "codigo": "901 001",
+      "codigo_plano": "901001",
+      "nombre": "AJUSTES POR VALIDACIÓN DE DATOS RC",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "901000"
+    },
+    {
+      "codigo": "905 001",
+      "codigo_plano": "905001",
+      "nombre": "REINTEGROS AL MINISTERIO DE EDUCACIÓN POR DETERMINACIÓN DE SALDOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "905000"
+    },
+    {
+      "codigo": "910 001",
+      "codigo_plano": "910001",
+      "nombre": "AJUSTES POR RECTIFICACIÓN - AGREGAR",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910000"
+    },
+    {
+      "codigo": "910 002",
+      "codigo_plano": "910002",
+      "nombre": "AJUSTES POR RECTIFICACIÓN - REIMPUTAR",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910000"
+    },
+    {
+      "codigo": "910 003",
+      "codigo_plano": "910003",
+      "nombre": "AJUSTES POR RECTIFICACIÓN - MODIFICAR",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910000"
+    },
+    {
+      "codigo": "910 004",
+      "codigo_plano": "910004",
+      "nombre": "AJUSTES POR RECTIFICACIÓN - INGRESOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910000"
+    },
+    {
+      "codigo": "910 102",
+      "codigo_plano": "910102",
+      "nombre": "REGULARIZACION BASE DE DATOS - RECTIFICACIÓN - REIMPUTAR",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910100"
+    },
+    {
+      "codigo": "910 103",
+      "codigo_plano": "910103",
+      "nombre": "REGULARIZACION BASE DE DATOS - RECTIFICACIÓN - MODIFICAR",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910100"
+    },
+    {
+      "codigo": "910 104",
+      "codigo_plano": "910104",
+      "nombre": "REGULARIZACION BASE DE DATOS - RECTIFICACIÓN - INGRESOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910100"
+    },
+    {
+      "codigo": "910 105",
+      "codigo_plano": "910105",
+      "nombre": "REGULARIZACION BASE DE DATOS - RECTIFICACIÓN - OTROS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910100"
+    },
+    {
+      "codigo": "910 202",
+      "codigo_plano": "910202",
+      "nombre": "AJUSTES POR RECTIFICACIÓN CGR - REIMPUTAR",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910200"
+    },
+    {
+      "codigo": "910 203",
+      "codigo_plano": "910203",
+      "nombre": "AJUSTES POR RECTIFICACIÓN CGR - MODIFICAR",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910200"
+    },
+    {
+      "codigo": "910 204",
+      "codigo_plano": "910204",
+      "nombre": "AJUSTES POR RECTIFICACIÓN CGR - INGRESOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910200"
+    },
+    {
+      "codigo": "910 205",
+      "codigo_plano": "910205",
+      "nombre": "AJUSTES POR RECTIFICACIÓN CGR - OTROS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910200"
+    },
+    {
+      "codigo": "910 901",
+      "codigo_plano": "910901",
+      "nombre": "OTROS AJUSTES POR RECTIFICACIÓN - AGREGAR",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910900"
+    },
+    {
+      "codigo": "910 902",
+      "codigo_plano": "910902",
+      "nombre": "OTROS AJUSTES POR RECTIFICACIÓN - REIMPUTAR",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910900"
+    },
+    {
+      "codigo": "910 903",
+      "codigo_plano": "910903",
+      "nombre": "OTROS AJUSTES POR RECTIFICACIÓN - MODIFICAR",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910900"
+    },
+    {
+      "codigo": "910 904",
+      "codigo_plano": "910904",
+      "nombre": "OTROS AJUSTES POR RECTIFICACIÓN - INGRESOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910900"
+    },
+    {
+      "codigo": "910 905",
+      "codigo_plano": "910905",
+      "nombre": "OTROS AJUSTES POR RECTIFICACIÓN",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910900"
+    },
+    {
+      "codigo": "920 001",
+      "codigo_plano": "920001",
+      "nombre": "OTROS AJUSTES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "920000"
+    }
+  ],
+  "cuentas_agrupadoras": [
+    {
+      "codigo": "300 000",
+      "codigo_plano": "300000",
+      "nombre": "INGRESOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "300000"
+    },
+    {
+      "codigo": "310 100",
+      "codigo_plano": "310100",
+      "nombre": "INGRESOS POR SUBVENCIONES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310100"
+    },
+    {
+      "codigo": "310 200",
+      "codigo_plano": "310200",
+      "nombre": "BONIFICACIONES E INCREMENTOS REMUNERACIONALES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310200"
+    },
+    {
+      "codigo": "310 300",
+      "codigo_plano": "310300",
+      "nombre": "SUBVENCIONES ESPECIALES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310300"
+    },
+    {
+      "codigo": "310 400",
+      "codigo_plano": "310400",
+      "nombre": "RELIQUIDACIONES, DEVOLUCIONES Y PAGOS MANUALES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310400"
+    },
+    {
+      "codigo": "310 500",
+      "codigo_plano": "310500",
+      "nombre": "DESCUENTOS Y MULTAS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310500"
+    },
+    {
+      "codigo": "310 600",
+      "codigo_plano": "310600",
+      "nombre": "BONOS Y AGUINALDOS LEY DE REAJUSTE SECTOR PÚBLICO",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310600"
+    },
+    {
+      "codigo": "310 700",
+      "codigo_plano": "310700",
+      "nombre": "OTROS INGRESOS FISCALES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310700"
+    },
+    {
+      "codigo": "310 800",
+      "codigo_plano": "310800",
+      "nombre": "INGRESOS PRIVADOS ESTABLECIMIENTO",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310800"
+    },
+    {
+      "codigo": "310 900",
+      "codigo_plano": "310900",
+      "nombre": "DONACIONES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "310900"
+    },
+    {
+      "codigo": "311 100",
+      "codigo_plano": "311100",
+      "nombre": "OTROS INGRESOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "311100"
+    },
+    {
+      "codigo": "400 000",
+      "codigo_plano": "400000",
+      "nombre": "GASTOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "400000"
+    },
+    {
+      "codigo": "410 500",
+      "codigo_plano": "410500",
+      "nombre": "ASESORÍA TÉCNICA Y ACTIVIDADES DE INFORMACIÓN Y ORIENTACIÓN",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410500"
+    },
+    {
+      "codigo": "410 600",
+      "codigo_plano": "410600",
+      "nombre": "GASTOS EN RECURSOS DE APRENDIZAJE",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410600"
+    },
+    {
+      "codigo": "410 800",
+      "codigo_plano": "410800",
+      "nombre": "GASTOS EN ALUMNOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410800"
+    },
+    {
+      "codigo": "410 900",
+      "codigo_plano": "410900",
+      "nombre": "GASTOS DE OPERACIÓN",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "410900"
+    },
+    {
+      "codigo": "411 600",
+      "codigo_plano": "411600",
+      "nombre": "GASTOS EN CONSTRUCCIÓN Y MANTENCIÓN DE INFRAESTRUCTURA",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "411600"
+    },
+    {
+      "codigo": "700 000",
+      "codigo_plano": "700000",
+      "nombre": "EGRESOS POR RECURSOS CENTRALIZADOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "GASTO",
+      "familia": "700000"
+    },
+    {
+      "codigo": "800 000",
+      "codigo_plano": "800000",
+      "nombre": "INGRESOS POR RECURSOS CENTRALIZADOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "INGRESO",
+      "familia": "800000"
+    },
+    {
+      "codigo": "900 000",
+      "codigo_plano": "900000",
+      "nombre": "INGRESOS POR GASTOS NO ACEPTADOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "900000"
+    },
+    {
+      "codigo": "901 000",
+      "codigo_plano": "901000",
+      "nombre": "AJUSTES POR VALIDACIÓN DE DATOS RC",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "901000"
+    },
+    {
+      "codigo": "905 000",
+      "codigo_plano": "905000",
+      "nombre": "REINTEGROS AL MINISTERIO DE EDUCACIÓN POR DETERMINACIÓN DE SALDOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "905000"
+    },
+    {
+      "codigo": "910 000",
+      "codigo_plano": "910000",
+      "nombre": "AJUSTES POR RECTIFICACIÓN",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910000"
+    },
+    {
+      "codigo": "910 100",
+      "codigo_plano": "910100",
+      "nombre": "AJUSTES POR RECTIFICACIÓN - REGULARIZACIONES BASE DE DATOS",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910100"
+    },
+    {
+      "codigo": "910 200",
+      "codigo_plano": "910200",
+      "nombre": "AJUSTES POR RECTIFICACIÓN - CGR",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910200"
+    },
+    {
+      "codigo": "910 900",
+      "codigo_plano": "910900",
+      "nombre": "OTROS AJUSTES POR RECTIFICACIÓN",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "910900"
+    },
+    {
+      "codigo": "920 000",
+      "codigo_plano": "920000",
+      "nombre": "INGRESOS POR OTROS AJUSTES",
+      "subvenciones": [],
+      "libro_rendicion": null,
+      "documentos_habilitados": [],
+      "tipo": "AJUSTE",
+      "familia": "920000"
+    }
+  ]
+}

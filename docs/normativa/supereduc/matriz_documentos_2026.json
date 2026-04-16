@@ -1,0 +1,3357 @@
+{
+  "metadata": {
+    "fuente": "Manual de Cuentas para la Rendición de Recursos destinados a Educación 2026",
+    "autoridad": "Superintendencia de Educación (SuperEduc)",
+    "version": "2026",
+    "fecha_publicacion": "Enero 2026",
+    "total_cuentas_operativas": 239,
+    "total_cuentas_agrupadoras": 27,
+    "subvenciones_validas": [
+      "General",
+      "General AC",
+      "SEP",
+      "SEP AC",
+      "PIE",
+      "Pro Retención",
+      "Internado",
+      "Refuerzo Educativo",
+      "Mantenimiento"
+    ],
+    "libros_rendicion": [
+      "Remuneraciones",
+      "Compras y Otros Gastos",
+      "Compras y Otros Gastos - Honorarios",
+      "Honorarios",
+      "Ingresos"
+    ],
+    "tipos_documento": {
+      "BOL": "Boleta de Ventas y Servicios",
+      "BOLE": "Boleta Electrónica",
+      "BOLEX": "Boleta Electrónica Exenta",
+      "BOLEC": "Boleta Electrónica del Contribuyente",
+      "BOLH": "Boleta de Honorarios",
+      "BOLHE": "Boleta de Honorarios Electrónica",
+      "BHE": "Boleta de Honorarios Electrónica",
+      "BPST": "Boleta de Prestación de Servicios de Terceros",
+      "BPSTE": "Boleta de Prestación de Servicios de Terceros Electrónica",
+      "FAC": "Factura",
+      "FACE": "Factura Electrónica",
+      "FACEX": "Factura Electrónica Exenta",
+      "FACEL": "Factura Electrónica de Ventas y Servicios",
+      "FIN": "Finiquito",
+      "ODE": "Orden de Egreso",
+      "DOCEX": "Documento Exento",
+      "NOTACRE": "Nota de Crédito",
+      "NOTADEB": "Nota de Débito"
+    }
+  },
+  "descripcion": "Matriz de validación: para cada cuenta operativa, qué tipos de documento tributario son aceptables al registrar un movimiento. Si un gasto se imputa a una cuenta y el documento de respaldo no está en la lista, SuperEduc rechazará la rendición.",
+  "matriz": {
+    "310103": {
+      "nombre": "INCREMENTO DE ZONA",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310106": {
+      "nombre": "LEY N° 19.410",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310108": {
+      "nombre": "APORTE POR FONDOS DE BECAS",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310109": {
+      "nombre": "APORTE POR GRATUIDAD",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310110": {
+      "nombre": "DIFERENCIA SUBVENCIÓN MÍNIMA",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310201": {
+      "nombre": "ASIGNACIÓN DESEMPEÑO CONDICIONES DIFÍCILES DOCENTES",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310202": {
+      "nombre": "BONIFICACIÓN COMPENSATORIA, ART.3°, LEY N° 19.200",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310203": {
+      "nombre": "UMP COMPLEMENTARIA INCISO 2° ART.10° LEY N° 19.278",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310204": {
+      "nombre": "SNED DOCENTES ART. 40° DFL N° 2/98 ED.",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310205": {
+      "nombre": "SNED ASISTENTES EDUCACIÓN LEY N° 20.244 Y ART. 45 LEY N° 21.109.",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310206": {
+      "nombre": "BONIFICACIÓN DE PROFESORES ENCARGADOS, LEY N° 19.715, ART.13°",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310207": {
+      "nombre": "BRP TÍTULO Y MENCIÓN LEY N° 20.158",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310208": {
+      "nombre": "ASIGNACIÓN DE EXCELENCIA PEDAGÓGICA (AEP) LEY N° 19.715",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310209": {
+      "nombre": "ASIGNACIÓN VARIABLE DE DESEMPEÑO INDIVIDUAL ART.17, LEY N° 19.933",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310210": {
+      "nombre": "ASIGNACIÓN POR DESEMPEÑO COLECTIVO, ART.18, LEY N°19.933",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310211": {
+      "nombre": "ASIGNACIÓN DESEMPEÑO CONDICIONES DIFÍCILES DE LOS ASISTENTES DE LA",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310212": {
+      "nombre": "ASIGNACIÓN DE RECONOCIMIENTO EN ESTABLECIMIENTOS DE ALTA",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310213": {
+      "nombre": "ASIGNACIÓN POR TRAMO DE DESARROLLO PROFESIONAL",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310214": {
+      "nombre": "ASIGNACIÓN DE RECONOCIMIENTO EN ESTABLECIMIENTOS DE ALTA",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310215": {
+      "nombre": "BONO RENTAS MENORES ASISTENTES DE LA EDUCACIÓN",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310301": {
+      "nombre": "SUBVENCIÓN ESCOLAR PREFERENCIAL, LEY N° 20.248",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310302": {
+      "nombre": "SUBVENCIÓN POR CONCENTRACIÓN, ART. 16 DE LA LEY N° 20.248",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310303": {
+      "nombre": "APORTE ADICIONAL SEP",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310304": {
+      "nombre": "APORTE EXTRAORDINARIO SEP",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310305": {
+      "nombre": "SUBVENCIÓN ANUAL DE APOYO AL MANTENIMIENTO, ART. 37°, DFL(ED) N° 2,",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310306": {
+      "nombre": "SUBVENCIÓN EDUCACIONAL PRORETENCIÓN",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310307": {
+      "nombre": "SUBVENCIÓN DE INTERNADO",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310308": {
+      "nombre": "SUBVENCIÓN DE REFUERZO EDUCATIVO, ART. 39, D.F.L. (ED) N° 2, DE 1998",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310401": {
+      "nombre": "RELIQUIDACIONES",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310402": {
+      "nombre": "RELIQUIDACIONES FINANCIAMIENTO COMPARTIDO",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310403": {
+      "nombre": "PAGOS MANUALES",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310404": {
+      "nombre": "DEVOLUCIONES",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310406": {
+      "nombre": "AJUSTES POR PAGO REZAGADO SEP",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310501": {
+      "nombre": "REINTEGROS",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310502": {
+      "nombre": "MULTAS",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310503": {
+      "nombre": "DESCUENTOS POR DISCREPANCIAS",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310504": {
+      "nombre": "DESCUENTOS POR DERECHOS DE ESCOLARIDAD",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310505": {
+      "nombre": "DESCUENTOS POR FINANCIAMIENTO COMPARTIDO",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310506": {
+      "nombre": "DESCUENTO POR ANTICIPO SUBVENCIÓN LEY N°20.822",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310507": {
+      "nombre": "OTROS DESCUENTOS",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310508": {
+      "nombre": "GARANTÍA FONDO INFRAESTRUCTURA ESCOLAR (GIE)",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310509": {
+      "nombre": "RETENCIONES JUDICIALES",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310510": {
+      "nombre": "RETENCIONES PREVISIONALES",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310511": {
+      "nombre": "OTRAS RETENCIONES",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310512": {
+      "nombre": "PRIVACIONES",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310601": {
+      "nombre": "BONO DE ESCOLARIDAD Y BONO ADICIONAL",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310602": {
+      "nombre": "AGUINALDO DE NAVIDAD",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310603": {
+      "nombre": "AGUINALDO DE FIESTAS PATRIAS",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310604": {
+      "nombre": "BONO ESPECIAL",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310605": {
+      "nombre": "BONO VACACIONES",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310606": {
+      "nombre": "BONO DESEMPEÑO LABORAL",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310607": {
+      "nombre": "OTROS BONOS FISCALES",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310702": {
+      "nombre": "OTROS INGRESOS FISCALES",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310704": {
+      "nombre": "BONIFICACIÓN ADICIONAL POR ANTIGÜEDAD ART. N° 6 LEY N° 20.652",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310705": {
+      "nombre": "APORTE FISCAL EXTRAORDINARIO POR RETIRO VOLUNTARIO PROFESIONALES",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310706": {
+      "nombre": "APORTE COMPLEMENTARIO POR RETIRO VOLUNTARIO PROFESIONALES DE LA",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310708": {
+      "nombre": "BONIFICACIÓN ADICIONAL, LEY N° 20.964 DE RETIRO VOLUNTARIO DE",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310709": {
+      "nombre": "APOYO AL SISTEMA DE TRANSPORTE ESCOLAR RURAL (DECRETO SUPREMO",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310710": {
+      "nombre": "ANTICIPO POR SUBVENCIÓN",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310711": {
+      "nombre": "INGRESOS POR CONVENIO A LICEOS BICENTENARIO",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310712": {
+      "nombre": "INGRESOS POR PLANES DE SUPERACIÓN PROFESIONAL (PSP)",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310801": {
+      "nombre": "MATRÍCULAS",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310806": {
+      "nombre": "ARRIENDO DE INSTALACIONES",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310807": {
+      "nombre": "OTROS INGRESOS DE LA OPERACIÓN",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310808": {
+      "nombre": "INGRESO FINANCIAMIENTO COMPARTIDO (FICOM)",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310809": {
+      "nombre": "INGRESO POR RECUPERACIÓN JUDICIAL DE FINANCIAMIENTO COMPARTIDO",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310901": {
+      "nombre": "CENTROS DE PADRES Y APODERADOS",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310902": {
+      "nombre": "INSTITUCIONES Y EMPRESAS",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310903": {
+      "nombre": "PERSONAS NATURALES",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "310904": {
+      "nombre": "OTRAS DONACIONES",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "311101": {
+      "nombre": "INTERESES Y REAJUSTES DEL MERCADO DE CAPITALES",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "311102": {
+      "nombre": "OTROS INGRESOS FINANCIEROS",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "311103": {
+      "nombre": "OTROS INGRESOS",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "311104": {
+      "nombre": "INGRESOS APOYO INICIO ACTIVIDAD",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "311105": {
+      "nombre": "REINTEGRO LICENCIAS MÉDICAS",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "311106": {
+      "nombre": "APORTE MUNICIPAL",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410100": {
+      "nombre": "GASTOS REMUNERACIONALES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410101": {
+      "nombre": "SUELDO BASE",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410102": {
+      "nombre": "HORAS EXTRAS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410103": {
+      "nombre": "LEY N° 19.933",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "PIE"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410105": {
+      "nombre": "BRP TÍTULO Y MENCIÓN LEY N° 20.158",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410106": {
+      "nombre": "LEY N° 19.464 ASISTENTES (INCLUYE INTERNADOS) (ART.5° TRANS.DFL N°",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "Internado"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410107": {
+      "nombre": "ASIGNACIÓN DESEMPEÑO CONDICIONES DIFÍCILES DOCENTES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410108": {
+      "nombre": "BONIFICACIÓN COMPENSATORIA ART 3°, LEY N° 19.200",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410109": {
+      "nombre": "SNED DOCENTES ART.40 DFL N° 2/98 ED.",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410111": {
+      "nombre": "UMP COMPLEMENTARIA INCISO 2° ART. 10°, LEY N° 19.278",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410112": {
+      "nombre": "BONIFICACIÓN DE PROFESORES ENCARGADOS, LEY N° 19.715, ART. 13",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410113": {
+      "nombre": "ASIGNACIÓN DE EXCELENCIA PEDAGÓGICA (AEP) LEY N° 19.715",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410114": {
+      "nombre": "ASIGNACIÓN VARIABLE DE DESEMPEÑO INDIVIDUAL ART.17 Y 17 BIS DE LA LEY",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410115": {
+      "nombre": "ASIGNACIÓN POR DESEMPEÑO COLECTIVO, ART.18, LEY N° 19.933",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410116": {
+      "nombre": "ASIGNACIONES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410117": {
+      "nombre": "PAGO OTROS BONOS DOCENTES FISCALES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410118": {
+      "nombre": "PAGO OTROS BONOS ASISTENTES DE LA EDUCACIÓN FISCALES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410119": {
+      "nombre": "COLACIÓN Y MOVILIZACIÓN",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410120": {
+      "nombre": "DEVOLUCIÓN BONOS REMUNERACIONALES FISCALES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [
+        "ODE"
+      ],
+      "requiere_documento": true
+    },
+    "410121": {
+      "nombre": "BONOS ACORDADOS CON LA ENTIDAD SOSTENEDORA",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410123": {
+      "nombre": "ASIGNACIÓN DESEMPEÑO CONDICIONES DIFÍCILES ASISTENTES DE LA",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410124": {
+      "nombre": "BONO INCENTIVO AL DESEMPEÑO LEY N° 20.248 ART. 8° N° 4",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "SEP"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410125": {
+      "nombre": "PLANILLA COMPLEMENTARIA",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410126": {
+      "nombre": "BONO EXTRAORDINARIO (SAE )",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410127": {
+      "nombre": "ASIGNACIÓN DE RECONOCIMIENTO EN ESTABLECIMIENTOS DE ALTA",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410128": {
+      "nombre": "ASIGNACIÓN POR TRAMO DE DESARROLLO PROFESIONAL",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410129": {
+      "nombre": "PLANILLA SUPLEMENTARIA , ARTÍCULOS 19° Y 33° TRANS ITORIOS DE LA LEY N°",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410130": {
+      "nombre": "ASIGNACIÓN DE RECONOCIMIENTO EN ESTABLECIMIENTOS DE ALTA",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410131": {
+      "nombre": "BONO RENTAS MENORES ASISTENTES DE LA EDUCACIÓN",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410200": {
+      "nombre": "GASTOS BONOS Y AGUINALDOS LEY DE REAJUSTE SECTOR PÚBLICO",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410201": {
+      "nombre": "PAGO POR BONO ESCOLAR Y ADICIONAL",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410202": {
+      "nombre": "PAGO AGUINALDO NAVIDAD",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410203": {
+      "nombre": "PAGO AGUINALDO DE FIESTAS PATRIAS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410204": {
+      "nombre": "PAGO BONO ESPECIAL",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410205": {
+      "nombre": "PAGO BONO VACACIONES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410206": {
+      "nombre": "PAGO BONO DESEMPEÑO LABORAL",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410207": {
+      "nombre": "OTROS BONOS NO IMPONIBLES LEY DE REAJUSTE",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410208": {
+      "nombre": "DEVOLUCIÓN BONOS LEY DE REAJUSTE",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [
+        "ODE"
+      ],
+      "requiere_documento": true
+    },
+    "410300": {
+      "nombre": "OTROS GASTOS EN PERSONAL",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "FIN"
+      ],
+      "requiere_documento": true
+    },
+    "410301": {
+      "nombre": "INDEMNIZACIONES Y/O FERIADO PROPORCIONAL",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "FIN"
+      ],
+      "requiere_documento": true
+    },
+    "410302": {
+      "nombre": "VIÁTICOS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "ODE"
+      ],
+      "requiere_documento": true
+    },
+    "410303": {
+      "nombre": "BONO RETIRO ASISTENTES EDUCACIÓN",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [
+        "FIN"
+      ],
+      "requiere_documento": true
+    },
+    "410304": {
+      "nombre": "OTROS GASTOS EN PERSONAL",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos – Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX"
+      ],
+      "requiere_documento": true
+    },
+    "410306": {
+      "nombre": "BONIFICACIÓN ADICIONAL POR ANTIGÜEDAD",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [
+        "FIN"
+      ],
+      "requiere_documento": true
+    },
+    "410307": {
+      "nombre": "APORTE FISCAL EXTRAORDINARIO POR RETIRO VOLUNTARIO PROFESIONALES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [
+        "FIN",
+        "ODE"
+      ],
+      "requiere_documento": true
+    },
+    "410308": {
+      "nombre": "APORTE COMPLEMENTARIO POR RETIRO VOLUNTARIO PROFESIONALES DE LA",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [
+        "FIN",
+        "ODE"
+      ],
+      "requiere_documento": true
+    },
+    "410309": {
+      "nombre": "SALA CUNA",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos – Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX"
+      ],
+      "requiere_documento": true
+    },
+    "410312": {
+      "nombre": "BONIFICACIÓN POR RETIRO VOLUNTARIO AL PERSONAL ASISTENTE DE LA",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [
+        "ODE"
+      ],
+      "requiere_documento": true
+    },
+    "410400": {
+      "nombre": "APORTES PREVISIONALES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410401": {
+      "nombre": "SEGURO DE ACCIDENTE DEL TRABAJO",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410402": {
+      "nombre": "SEGURO DE CESANTÍA",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410403": {
+      "nombre": "SEGURO DE INVALIDEZ Y SOBREVIVENCIA (SIS)",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410404": {
+      "nombre": "OTROS APORTES PREVISIONALES DE LA ENTIDAD SOSTENEDORA",
+      "tipo": "GASTO",
+      "libro_rendicion": "Remuneraciones",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410501": {
+      "nombre": "ASISTENCIA TÉCNICO PEDAGÓGICA EDUCATIVA (REGISTRO ATE)",
+      "tipo": "GASTO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410502": {
+      "nombre": "ACCIONES FORMATIVAS Y PERFECCIONAMIENTO DE RR.HH.",
+      "tipo": "GASTO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410503": {
+      "nombre": "ACTIVIDADES PARA EL FORTALECIMIENTO DE LOS OBJETIVOS DE",
+      "tipo": "GASTO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410601": {
+      "nombre": "IMPLEMENTOS DE LABORATORIO",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Pro Retención",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX",
+        "DOCEX"
+      ],
+      "requiere_documento": true
+    },
+    "410602": {
+      "nombre": "IMPLEMENTOS DEPORTIVOS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Pro Retención",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX",
+        "DOCEX"
+      ],
+      "requiere_documento": true
+    },
+    "410603": {
+      "nombre": "INSTRUMENTOS MUSICALES Y ARTÍSTICOS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Pro Retención",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX",
+        "DOCEX"
+      ],
+      "requiere_documento": true
+    },
+    "410604": {
+      "nombre": "RECURSOS AUDIOVISUALES Y SOFTWARE EDUCATIVO",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX",
+        "DOCEX"
+      ],
+      "requiere_documento": true
+    },
+    "410605": {
+      "nombre": "MATERIAL Y RECURSOS DIDÁCTICOS",
+      "tipo": "GASTO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410606": {
+      "nombre": "BIBLIOTECAS, LIBROS Y REVISTAS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX",
+        "DOCEX"
+      ],
+      "requiere_documento": true
+    },
+    "410607": {
+      "nombre": "EVENTOS EDUCATIVOS Y CULTURALES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos – Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX"
+      ],
+      "requiere_documento": true
+    },
+    "410608": {
+      "nombre": "EVALUACIÓN DIAGNÓSTICA",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos – Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "BOLHE",
+        "FACEL"
+      ],
+      "requiere_documento": true
+    },
+    "410609": {
+      "nombre": "OTROS GASTOS EN RECURSOS DE APRENDIZAJE",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "PIE",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX",
+        "DOCEX"
+      ],
+      "requiere_documento": true
+    },
+    "410700": {
+      "nombre": "GASTOS EN EQUIPAMIENTO DE APOYO PEDAGÓGICO",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "DOCEX",
+        "NOTACRE"
+      ],
+      "requiere_documento": true
+    },
+    "410701": {
+      "nombre": "EQUIPOS DE FOTOGRAFÍA Y FILMACIÓN",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "DOCEX",
+        "NOTACRE"
+      ],
+      "requiere_documento": true
+    },
+    "410702": {
+      "nombre": "PIZARRAS INTERACTIVAS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "DOCEX",
+        "NOTACRE"
+      ],
+      "requiere_documento": true
+    },
+    "410703": {
+      "nombre": "EQUIPOS INFORMÁTICOS Y LICENCIAS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Mantenimiento",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "DOCEX",
+        "NOTACRE"
+      ],
+      "requiere_documento": true
+    },
+    "410704": {
+      "nombre": "EQUIPOS REPRODUCTORES DE IMAGEN",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Mantenimiento",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "DOCEX",
+        "NOTACRE"
+      ],
+      "requiere_documento": true
+    },
+    "410705": {
+      "nombre": "EQUIPOS MULTICOPIADORES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "DOCEX",
+        "NOTACRE"
+      ],
+      "requiere_documento": true
+    },
+    "410706": {
+      "nombre": "EQUIPOS DE AMPLIFICACIÓN Y SONIDO",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "DOCEX",
+        "NOTACRE"
+      ],
+      "requiere_documento": true
+    },
+    "410707": {
+      "nombre": "OTROS GASTOS EN EQUIPAMIENTO DE APOYO PEDAGÓGICO",
+      "tipo": "GASTO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410801": {
+      "nombre": "UNIFORMES Y VESTUARIO",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos – Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "Pro Retención",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "BPST"
+      ],
+      "requiere_documento": true
+    },
+    "410802": {
+      "nombre": "OTROS GASTOS ALUMNOS",
+      "tipo": "GASTO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410803": {
+      "nombre": "TALLERES EXTRAPROGRAMÁTICOS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "Pro Retención",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOLH",
+        "BHE",
+        "BOLHE",
+        "BPST",
+        "BPSTE"
+      ],
+      "requiere_documento": true
+    },
+    "410804": {
+      "nombre": "CONTRATACIÓN DE APOYO DE ESPECIALISTAS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "PIE",
+        "Pro Retención"
+      ],
+      "documentos_aceptados": [
+        "BOLH",
+        "BHE",
+        "FACE",
+        "ODE",
+        "BOLEX",
+        "BOLHE",
+        "FACEX",
+        "BPST",
+        "BPSTE"
+      ],
+      "requiere_documento": true
+    },
+    "410805": {
+      "nombre": "APOYO AL ESTUDIANTE",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "Pro Retención"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "410806": {
+      "nombre": "ÚTILES ESCOLARES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "Pro Retención"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "DOCEX",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "410901": {
+      "nombre": "TRANSPORTE ESCOLAR",
+      "tipo": "GASTO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "410902": {
+      "nombre": "MATERIALES DE OFICINA",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP AC",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "DOCEX",
+        "NOTACRE"
+      ],
+      "requiere_documento": true
+    },
+    "410903": {
+      "nombre": "REPRODUCCIÓN DE DOCUMENTOS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX"
+      ],
+      "requiere_documento": true
+    },
+    "410904": {
+      "nombre": "ALIMENTACIÓN",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "Pro Retención",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE"
+      ],
+      "requiere_documento": true
+    },
+    "410905": {
+      "nombre": "INSUMOS COMPUTACIONALES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "DOCEX",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "410906": {
+      "nombre": "COMBUSTIBLE Y PEAJES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Pro Retención",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "FACEL",
+        "FACEX",
+        "NOTACRE"
+      ],
+      "requiere_documento": true
+    },
+    "410907": {
+      "nombre": "MATERIALES Y ÚTILES DE ASEO",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "410908": {
+      "nombre": "PUBLICIDAD",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos – Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE"
+      ],
+      "requiere_documento": true
+    },
+    "410909": {
+      "nombre": "PASAJES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOLE",
+        "FACE",
+        "ODE",
+        "BOLEX",
+        "FACEX"
+      ],
+      "requiere_documento": true
+    },
+    "410910": {
+      "nombre": "OTROS GASTOS DE OPERACIÓN",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX"
+      ],
+      "requiere_documento": true
+    },
+    "410911": {
+      "nombre": "GASTOS MUNICIPALES , IMPUESTOS Y DONACIONES ORIGINADAS EN",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [
+        "ODE"
+      ],
+      "requiere_documento": true
+    },
+    "410912": {
+      "nombre": "CRÉDITOS FINANCIEROS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [
+        "ODE"
+      ],
+      "requiere_documento": true
+    },
+    "410913": {
+      "nombre": "GASTOS BANCARIOS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX"
+      ],
+      "requiere_documento": true
+    },
+    "410914": {
+      "nombre": "DEVOLUCIÓN APOYO INICIO ACTIVIDAD",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [
+        "ODE"
+      ],
+      "requiere_documento": true
+    },
+    "410916": {
+      "nombre": "CONTRATACIÓN DE SEGUROS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [
+        "FAC",
+        "FACEL",
+        "FACEX",
+        "NOTACRE",
+        "NOTADEB",
+        "ODE"
+      ],
+      "requiere_documento": true
+    },
+    "410917": {
+      "nombre": "DEVOLUCIONES DE FONDOS PÚBLICOS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Pro Retención",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "ODE"
+      ],
+      "requiere_documento": true
+    },
+    "410918": {
+      "nombre": "TRASLADO DE ESTUDIANTES POR ACTIVIDAD ESCOLAR",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos – Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "Pro Retención"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "BOLHE",
+        "FACEL"
+      ],
+      "requiere_documento": true
+    },
+    "411000": {
+      "nombre": "SERVICIOS BÁSICOS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "Pro Retención"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411001": {
+      "nombre": "INTERNET",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "Pro Retención"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411002": {
+      "nombre": "AGUA",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX"
+      ],
+      "requiere_documento": true
+    },
+    "411004": {
+      "nombre": "ELECTRICIDAD",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411005": {
+      "nombre": "SERVICIO DE CORRESPONDENCIA (CORREOS)",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "ODE",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411006": {
+      "nombre": "TELEFONÍA (MÓVIL Y FIJA)",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411007": {
+      "nombre": "COMBUSTIBLE O FUENTE DE ENERGÍA PARA CALEFACCIÓN",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "ODE",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411008": {
+      "nombre": "OTROS GASTOS SERVICIOS BÁSICOS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "ODE",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411100": {
+      "nombre": "SERVICIOS GENERALES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOLH",
+        "FAC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411101": {
+      "nombre": "CONTRATACIÓN SERVICIOS DE ASEO Y JARDINERÍA",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOLH",
+        "FAC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411102": {
+      "nombre": "CONTRATACIÓN SERVICIOS DE SEGURIDAD",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOLH",
+        "FAC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411103": {
+      "nombre": "CONTRATACIÓN OTROS SERVICIOS EXTERNOS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP AC"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "BOLHE",
+        "FACEL",
+        "FACEX",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411200": {
+      "nombre": "MULTAS E INTERESES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [
+        "ODE"
+      ],
+      "requiere_documento": true
+    },
+    "411201": {
+      "nombre": "MULTAS E INTERESES FISCALES Y PREVISIONALES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [
+        "ODE"
+      ],
+      "requiere_documento": true
+    },
+    "411400": {
+      "nombre": "ARRIENDOS DE INMUEBLES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX"
+      ],
+      "requiere_documento": true
+    },
+    "411401": {
+      "nombre": "ARRIENDO DE LOCAL ESCOLAR",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX"
+      ],
+      "requiere_documento": true
+    },
+    "411402": {
+      "nombre": "ARRIENDO DE OFICINAS Y/O DEPENDENCIAS DE ADMINISTRACIÓN",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General AC",
+        "SEP AC",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411403": {
+      "nombre": "ARRIENDO DE OTROS BIENES INMUEBLES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "Pro Retención",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "ODE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX"
+      ],
+      "requiere_documento": true
+    },
+    "411404": {
+      "nombre": "MEJORAS ÚTILES Y NECESARIAS EN LOCAL ESCOLAR ARRENDADO",
+      "tipo": "GASTO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "411500": {
+      "nombre": "ARRIENDOS DE BIENES MUEBLES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411501": {
+      "nombre": "ARRIENDO DE EQUIPOS INFORMÁTICOS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Internado",
+        "Refuerzo Educativo"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411502": {
+      "nombre": "ARRIENDO DE MAQUINARIAS Y EQUIPOS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411503": {
+      "nombre": "ARRIENDO DE MOBILIARIO",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411504": {
+      "nombre": "ARRIENDO DE OTROS BIENES MUEBLES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "PIE",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "FAC",
+        "BOLEC",
+        "FACEL",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411601": {
+      "nombre": "MANTENIMIENTO Y REPARACIÓN DE INFRAESTRUCTURA",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE"
+      ],
+      "requiere_documento": true
+    },
+    "411602": {
+      "nombre": "CONSTRUCCIÓN DE INFRAESTRUCTURA (OBRA GRUESA)",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOLH",
+        "FAC",
+        "FACE",
+        "BOLHE",
+        "FACEL",
+        "FACEX",
+        "BPST",
+        "BPSTE"
+      ],
+      "requiere_documento": true
+    },
+    "411603": {
+      "nombre": "TERMINACIONES DE INFRAESTRUCTURA",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411604": {
+      "nombre": "INSTALACIONES ELÉCTRICAS, ILUMINACIÓN Y SISTEMAS DE CALEFACCIÓN",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411605": {
+      "nombre": "INSTALACIONES DE GAS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "FACEX",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411606": {
+      "nombre": "INSTALACIONES DE AGUA",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411607": {
+      "nombre": "ALCANTARILLADOS O POZOS SÉPTICOS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411608": {
+      "nombre": "CIERRES PERIMETRALES Y OBRAS COMPLEMENTARIAS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411609": {
+      "nombre": "SERVICIOS HIGIÉNICOS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411610": {
+      "nombre": "ELIMINACIÓN DE BARRERAS ARQUITÉCTONICAS DE MENOR ENVERGADURA",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "PIE",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLH",
+        "FAC",
+        "BOLEC",
+        "BOLHE",
+        "FACEL",
+        "BPST",
+        "BPSTE"
+      ],
+      "requiere_documento": true
+    },
+    "411700": {
+      "nombre": "GASTOS MANTENCIÓN Y REPARACIÓN DE BIENES MUEBLES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "BOLHE"
+      ],
+      "requiere_documento": true
+    },
+    "411701": {
+      "nombre": "MANTENCIÓN Y REPARACIÓN DE BIENES MUEBLES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "BOLHE"
+      ],
+      "requiere_documento": true
+    },
+    "411702": {
+      "nombre": "REPUESTOS, MANTENIMIENTO Y REPARACIÓN DE VEHÍCULOS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "BOLHE"
+      ],
+      "requiere_documento": true
+    },
+    "411703": {
+      "nombre": "MANTENCIÓN Y REPARACIÓN DE EQUIPOS COMPUTACIONALES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "BOLHE",
+        "FACEL",
+        "FACEX",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411704": {
+      "nombre": "MANTENCIÓN Y REPARACIÓN DE MOBILIARIO ESCOLAR",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General",
+        "SEP",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "BOLH",
+        "BHE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "BOLHE",
+        "FACEL",
+        "FACEX",
+        "BPST",
+        "BPSTE",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411800": {
+      "nombre": "ADQUISICIÓN DE BIENES MUEBLES E INMUEBLES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [
+        "BHE",
+        "ODE",
+        "BOLEX"
+      ],
+      "requiere_documento": true
+    },
+    "411801": {
+      "nombre": "ADQUISICIÓN DE BIENES INMUEBLES",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos - Honorarios",
+      "subvenciones_habilitadas": [
+        "General"
+      ],
+      "documentos_aceptados": [
+        "BHE",
+        "ODE",
+        "BOLEX"
+      ],
+      "requiere_documento": true
+    },
+    "411802": {
+      "nombre": "ADQUISICIÓN DE MOBILIARIO",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP",
+        "SEP AC",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX",
+        "DOCEX"
+      ],
+      "requiere_documento": true
+    },
+    "411803": {
+      "nombre": "ADQUISICIÓN DE VEHÍCULO",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC"
+      ],
+      "documentos_aceptados": [
+        "FAC",
+        "FACE",
+        "ODE",
+        "FACEL",
+        "FACEX",
+        "NOTACRE",
+        "NOTADEB"
+      ],
+      "requiere_documento": true
+    },
+    "411804": {
+      "nombre": "ADQUISICIÓN DE OTROS BIENES MUEBLES NO PEDAGÓGICOS",
+      "tipo": "GASTO",
+      "libro_rendicion": "Compras y Otros Gastos",
+      "subvenciones_habilitadas": [
+        "General",
+        "General AC",
+        "SEP AC",
+        "Mantenimiento",
+        "Internado"
+      ],
+      "documentos_aceptados": [
+        "BOL",
+        "BOLE",
+        "FAC",
+        "FACE",
+        "BOLEC",
+        "BOLEX",
+        "FACEL",
+        "FACEX"
+      ],
+      "requiere_documento": true
+    },
+    "700001": {
+      "nombre": "EGRESOS POR RECURSOS CENTRALIZADOS",
+      "tipo": "GASTO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "800001": {
+      "nombre": "INGRESOS POR RECURSOS CENTRALIZADOS",
+      "tipo": "INGRESO",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "900001": {
+      "nombre": "INGRESOS POR GASTOS NO ACEPTADOS",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "901001": {
+      "nombre": "AJUSTES POR VALIDACIÓN DE DATOS RC",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "905001": {
+      "nombre": "REINTEGROS AL MINISTERIO DE EDUCACIÓN POR DETERMINACIÓN DE SALDOS",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "910001": {
+      "nombre": "AJUSTES POR RECTIFICACIÓN - AGREGAR",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "910002": {
+      "nombre": "AJUSTES POR RECTIFICACIÓN - REIMPUTAR",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "910003": {
+      "nombre": "AJUSTES POR RECTIFICACIÓN - MODIFICAR",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "910004": {
+      "nombre": "AJUSTES POR RECTIFICACIÓN - INGRESOS",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "910102": {
+      "nombre": "REGULARIZACION BASE DE DATOS - RECTIFICACIÓN - REIMPUTAR",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "910103": {
+      "nombre": "REGULARIZACION BASE DE DATOS - RECTIFICACIÓN - MODIFICAR",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "910104": {
+      "nombre": "REGULARIZACION BASE DE DATOS - RECTIFICACIÓN - INGRESOS",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "910105": {
+      "nombre": "REGULARIZACION BASE DE DATOS - RECTIFICACIÓN - OTROS",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "910202": {
+      "nombre": "AJUSTES POR RECTIFICACIÓN CGR - REIMPUTAR",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "910203": {
+      "nombre": "AJUSTES POR RECTIFICACIÓN CGR - MODIFICAR",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "910204": {
+      "nombre": "AJUSTES POR RECTIFICACIÓN CGR - INGRESOS",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "910205": {
+      "nombre": "AJUSTES POR RECTIFICACIÓN CGR - OTROS",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "910901": {
+      "nombre": "OTROS AJUSTES POR RECTIFICACIÓN - AGREGAR",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "910902": {
+      "nombre": "OTROS AJUSTES POR RECTIFICACIÓN - REIMPUTAR",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "910903": {
+      "nombre": "OTROS AJUSTES POR RECTIFICACIÓN - MODIFICAR",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "910904": {
+      "nombre": "OTROS AJUSTES POR RECTIFICACIÓN - INGRESOS",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "910905": {
+      "nombre": "OTROS AJUSTES POR RECTIFICACIÓN",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    },
+    "920001": {
+      "nombre": "OTROS AJUSTES",
+      "tipo": "AJUSTE",
+      "libro_rendicion": null,
+      "subvenciones_habilitadas": [],
+      "documentos_aceptados": [],
+      "requiere_documento": false
+    }
+  }
+}

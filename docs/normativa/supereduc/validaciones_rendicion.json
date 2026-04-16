@@ -1,0 +1,130 @@
+{
+  "metadata": {
+    "fuente": "Manual de Cuentas SuperEduc 2026 - Secciones 3, 4, 5, 6",
+    "descripcion": "Reglas generales de validación que el ERP debe aplicar ANTES de registrar un movimiento en la rendición"
+  },
+  "reglas_globales": [
+    {
+      "id": "R001",
+      "nombre": "Fecha de pago obligatoria",
+      "descripcion": "Todo gasto debe tener fecha de pago registrada. La rendición se hace por fecha de pago, no por fecha de emisión del documento.",
+      "nivel": "ERROR",
+      "campo": "fecha_pago"
+    },
+    {
+      "id": "R002",
+      "nombre": "Año de rendición correcto",
+      "descripcion": "Solo se rinden gastos pagados dentro del año calendario que se rinde. Un gasto del 2026 no puede rendirse en el proceso 2025.",
+      "nivel": "ERROR",
+      "campo": "fecha_pago"
+    },
+    {
+      "id": "R003",
+      "nombre": "Documento tributario válido",
+      "descripcion": "El tipo de documento debe estar en la lista de documentos aceptados para esa cuenta. Ver matriz_documentos_2026.json.",
+      "nivel": "ERROR",
+      "campos": [
+        "cuenta_codigo",
+        "tipo_documento"
+      ]
+    },
+    {
+      "id": "R004",
+      "nombre": "Subvención habilitada para la cuenta",
+      "descripcion": "La fuente de financiamiento (subvención) debe estar habilitada para la cuenta a la que se imputa el gasto.",
+      "nivel": "ERROR",
+      "campos": [
+        "cuenta_codigo",
+        "subvencion"
+      ]
+    },
+    {
+      "id": "R005",
+      "nombre": "Gasto vinculado a funcionamiento educativo",
+      "descripcion": "Los gastos deben estar directamente vinculados al funcionamiento educativo del establecimiento. No se aceptan gastos personales del sostenedor.",
+      "nivel": "WARNING",
+      "campo": "descripcion"
+    },
+    {
+      "id": "R006",
+      "nombre": "RUT proveedor válido",
+      "descripcion": "El RUT del proveedor debe ser válido (dígito verificador correcto) y estar activo en SII.",
+      "nivel": "ERROR",
+      "campo": "rut_proveedor"
+    },
+    {
+      "id": "R007",
+      "nombre": "Monto coincide con documento tributario",
+      "descripcion": "El monto registrado debe coincidir con el monto del DTE en SII. Idealmente el ERP consulta SII para verificar.",
+      "nivel": "WARNING",
+      "campos": [
+        "monto",
+        "folio_documento"
+      ]
+    },
+    {
+      "id": "R008",
+      "nombre": "No rendir el mismo documento dos veces",
+      "descripcion": "Un mismo folio de documento no puede rendirse en más de una cuenta ni en más de un año.",
+      "nivel": "ERROR",
+      "campos": [
+        "folio_documento",
+        "rut_emisor"
+      ]
+    },
+    {
+      "id": "R009",
+      "nombre": "Cuenta operativa (no agrupadora)",
+      "descripcion": "Los movimientos solo pueden imputarse a cuentas operativas (hoja), no a cuentas agrupadoras.",
+      "nivel": "ERROR",
+      "campo": "cuenta_codigo"
+    },
+    {
+      "id": "R010",
+      "nombre": "Plazo de rendición respetado",
+      "descripcion": "La rendición se presenta hasta el 30 de abril del año siguiente al que se rinde (puede variar por resolución).",
+      "nivel": "WARNING",
+      "campo": "fecha_presentacion"
+    }
+  ],
+  "reglas_sep": [
+    {
+      "id": "SEP001",
+      "nombre": "SEP solo financia acciones del PME",
+      "descripcion": "Los gastos con cargo a Subvención Escolar Preferencial deben estar vinculados a acciones aprobadas en el Plan de Mejoramiento Educativo (PME).",
+      "nivel": "ERROR"
+    },
+    {
+      "id": "SEP002",
+      "nombre": "Administración Central SEP con límite",
+      "descripcion": "El sostenedor puede destinar hasta un 10% de los ingresos SEP a gastos de Administración Central (ver sección 5.7 del Manual).",
+      "nivel": "WARNING"
+    }
+  ],
+  "dictamenes_referenciados": [
+    {
+      "dictamen": "N°03/2014",
+      "tema": "Aplicación art. 15 transitorio Ley 20.248 SEP"
+    },
+    {
+      "dictamen": "N°04/2014",
+      "tema": "Subvención de apoyo al mantenimiento"
+    },
+    {
+      "dictamen": "N°22/2016",
+      "tema": "Transporte escolar con SEP"
+    },
+    {
+      "dictamen": "N°24/2016",
+      "tema": "Remuneraciones de sostenedores"
+    },
+    {
+      "dictamen": "N°40/2017",
+      "tema": "Mejoras útiles en inmuebles arrendados"
+    },
+    {
+      "dictamen": "N°66/2023",
+      "tema": "Arriendo de local escolar (deja sin efecto N°29)"
+    }
+  ]
+}
