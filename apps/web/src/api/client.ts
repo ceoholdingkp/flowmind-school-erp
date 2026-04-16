@@ -1,8 +1,14 @@
 import axios from 'axios';
 
+// Workaround temporal — ver DEUDA_TECNICA #6 para migración a Master DB
+const TENANT_ID = import.meta.env.VITE_TENANT_ID || 'colegio_san_andres';
+
 const api = axios.create({
   baseURL: '/api/v1',
-  headers: { 'Content-Type': 'application/json' },
+  headers: {
+    'Content-Type': 'application/json',
+    'x-tenant-id': TENANT_ID,
+  },
 });
 
 // Attach token to every request
