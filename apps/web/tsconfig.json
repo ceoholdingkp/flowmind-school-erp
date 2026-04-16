@@ -12,5 +12,6 @@
       "@flowmind/shared": ["../../packages/shared/src/index.ts"]
     }
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*"],
+  "exclude": ["**/*.spec.ts", "**/*.test.ts", "dist", "node_modules"]
 }

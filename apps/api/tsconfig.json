@@ -10,5 +10,6 @@
       "@flowmind/validators": ["../../packages/validators/src/index.ts"]
     }
   },
-  "include": ["src/**/*", "../../packages/shared/src/**/*", "../../packages/validators/src/**/*"]
+  "include": ["src/**/*", "../../packages/shared/src/**/*", "../../packages/validators/src/**/*"],
+  "exclude": ["**/*.spec.ts", "**/*.test.ts", "dist", "node_modules"]
 }
