@@ -12,7 +12,7 @@ Este directorio contiene los archivos fundacionales del proyecto. NO son código
 
 | Archivo | Qué es | Cómo usarlo |
 |---------|--------|-------------|
-| `prisma/schema.prisma` | Schema COMPLETO de base de datos | Copiar a `apps/api/prisma/schema.prisma` |
+| `apps/api/prisma/schema.prisma` | Schema COMPLETO de base de datos — fuente de verdad | Editar directamente, luego `npx prisma migrate dev` |
 | `packages/shared/src/events.ts` | 22 tipos de eventos tipados | Copiar a `packages/shared/src/events.ts` |
 | `packages/shared/src/rbac.ts` | Matriz de 12 roles × 60+ permisos | Copiar a `packages/shared/src/rbac.ts` |
 | `docker-compose.yml` | PostgreSQL 16 + Redis 7 + MinIO (S3) | Ejecutar `docker compose up -d` |
@@ -42,7 +42,7 @@ Este directorio contiene los archivos fundacionales del proyecto. NO son código
 ### Fase 0: Infraestructura (HACER PRIMERO)
 1. Inicializar monorepo Turborepo: `apps/api`, `apps/web`, `packages/shared`, `packages/validators`
 2. Copiar `docker-compose.yml`, ejecutar `docker compose up -d`
-3. Copiar `schema.prisma` a `apps/api/prisma/`, ejecutar `npx prisma migrate dev --name init`
+3. Schema ya en `apps/api/prisma/schema.prisma`, ejecutar `npx prisma migrate dev --name init`
 4. Copiar `events.ts` y `rbac.ts` a `packages/shared/src/`
 5. Implementar PrismaService + TenantMiddleware
 6. Implementar AuthModule (login, JWT, refresh, RBAC guard usando rbac.ts)
