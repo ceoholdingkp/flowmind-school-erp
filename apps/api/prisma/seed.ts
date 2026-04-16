@@ -1,11 +1,19 @@
 import { PrismaClient, Rol, TipoEstablecimiento, PeriodoEval } from '@prisma/client';
 import * as bcrypt from 'bcryptjs';
+import { TENANT_CONFIGS, TenantId } from './tenant-configs';
 
-const prisma = new PrismaClient({
-  datasources: {
-    db: { url: process.env.TENANT_DATABASE_URL || process.env.DATABASE_URL },
-  },
-});
+const tenantId = (process.argv[2] || 'colegio_san_andres') as TenantId;
+
+if (!TENANT_CONFIGS[tenantId]) {
+  console.error(`Tenant invalido: ${tenantId}`);
+  console.error(`Validos: ${Object.keys(TENANT_CONFIGS).join(', ')}`);
+  process.exit(1);
+}
+
+const cfg = TENANT_CONFIGS[tenantId];
+const tenantDbUrl = process.env.TENANT_DATABASE_URL?.replace('{tenantId}', tenantId)
+                 || process.env.DATABASE_URL;
+const prisma = new PrismaClient({ datasources: { db: { url: tenantDbUrl } } });
 
 // ─── RUN helpers ──────────────────────────────────────────────────────────────
 
@@ -71,28 +79,28 @@ async function main() {
 
   // ── 1. Establecimiento ─────────────────────────────────────────
   const establecimiento = await prisma.establecimiento.upsert({
-    where: { rbd: '12345-6' },
+    where: { rbd: cfg.establecimiento.rbd },
     update: {
-      nombre: 'Colegio San Andrés',
-      anioEscolarActivo: 2026,
+      nombre: cfg.establecimiento.nombre,
+      anioEscolarActivo: cfg.establecimiento.anioEscolarActivo,
     },
     create: {
-      nombre: 'Colegio San Andrés',
-      rbd: '12345-6',
-      direccion: 'Av. Principal 1234',
-      comuna: 'Santiago',
-      region: 'Metropolitana',
-      telefono: '+56 2 2345 6789',
-      email: 'contacto@sanandres.cl',
-      sostenedorRut: '76.543.210-K',
-      sostenedorNombre: 'Fundación Educacional San Andrés',
-      tipo: TipoEstablecimiento.PARTICULAR_SUBVENCIONADO,
-      anioEscolarActivo: 2026,
-      periodoEvaluacion: PeriodoEval.SEMESTRAL,
-      escalaMin: 1.0,
-      escalaMax: 7.0,
-      notaAprobacion: 4.0,
-      asistenciaMinima: 85.0,
+      nombre: cfg.establecimiento.nombre,
+      rbd: cfg.establecimiento.rbd,
+      direccion: cfg.establecimiento.direccion,
+      comuna: cfg.establecimiento.comuna,
+      region: cfg.establecimiento.region,
+      telefono: cfg.establecimiento.telefono,
+      email: cfg.establecimiento.email,
+      sostenedorRut: cfg.establecimiento.sostenedorRut,
+      sostenedorNombre: cfg.establecimiento.sostenedorNombre,
+      tipo: cfg.establecimiento.tipo,
+      anioEscolarActivo: cfg.establecimiento.anioEscolarActivo,
+      periodoEvaluacion: cfg.establecimiento.periodoEvaluacion,
+      escalaMin: cfg.establecimiento.escalaMin,
+      escalaMax: cfg.establecimiento.escalaMax,
+      notaAprobacion: cfg.establecimiento.notaAprobacion,
+      asistenciaMinima: cfg.establecimiento.asistenciaMinima,
     },
   });
   console.log(`✅ Establecimiento: ${establecimiento.nombre}`);
@@ -115,37 +123,29 @@ async function main() {
   });
 
   const director = await prisma.usuario.upsert({
-    where: { email: 'director@sanandres.cl' },
+    where: { email: cfg.emails.director },
     update: {},
     create: {
-      email: 'director@sanandres.cl', passwordHash: directorHash,
+      email: cfg.emails.director, passwordHash: directorHash,
       nombre: 'María', apellidos: 'González Pérez',
-      run: '12345678-9', rol: Rol.DIRECTOR,
+      run: cfg.runDirector, rol: Rol.DIRECTOR,
     },
   });
 
   const docenteUser = await prisma.usuario.upsert({
-    where: { email: 'docente@sanandres.cl' },
+    where: { email: cfg.emails.docente },
     update: {},
     create: {
-      email: 'docente@sanandres.cl', passwordHash: docenteHash,
+      email: cfg.emails.docente, passwordHash: docenteHash,
       nombre: 'Carlos', apellidos: 'Muñoz Silva',
-      run: '13456789-0', rol: Rol.DOCENTE,
+      run: cfg.runDocente, rol: Rol.DOCENTE,
     },
   });
 
   console.log(`✅ Usuarios staff: admin, director, docente`);
 
   // ── 3. Funcionarios ────────────────────────────────────────────
-  const funcionariosData = [
-    { run: '14567890-1', nombres: 'Ana María', apellidos: 'Rodríguez Fuentes', tipo: 'DOCENTE' as const, cargo: 'Profesora de Matemáticas', tramo: 'AVANZADO' as const, horas: 44, tipoContrato: 'INDEFINIDO' as const, fechaIngreso: '2018-03-01', afp: 'Capital', isapre: 'Fonasa', banco: 'BancoEstado' },
-    { run: '15678901-2', nombres: 'Roberto', apellidos: 'Silva Carreño', tipo: 'DOCENTE' as const, cargo: 'Profesor de Lenguaje', tramo: 'EXPERTO_I' as const, horas: 44, tipoContrato: 'INDEFINIDO' as const, fechaIngreso: '2015-03-01', afp: 'Habitat', isapre: 'Banmedica', banco: 'Santander' },
-    { run: '16789012-3', nombres: 'Patricia', apellidos: 'López Valenzuela', tipo: 'DOCENTE' as const, cargo: 'Profesora de Ciencias', tramo: 'TEMPRANO' as const, horas: 38, tipoContrato: 'INDEFINIDO' as const, fechaIngreso: '2021-03-01', afp: 'PlanVital', isapre: 'Fonasa', banco: 'Chile' },
-    { run: '17890123-4', nombres: 'Jorge', apellidos: 'Vega Contreras', tipo: 'DOCENTE' as const, cargo: 'Profesor de Historia', tramo: 'AVANZADO' as const, horas: 44, tipoContrato: 'INDEFINIDO' as const, fechaIngreso: '2017-03-01', afp: 'Cuprum', isapre: 'Cruz Blanca', banco: 'BCI' },
-    { run: '18901234-5', nombres: 'Claudia', apellidos: 'Herrera Pinto', tipo: 'DOCENTE' as const, cargo: 'Profesora de Inglés', tramo: 'INICIAL' as const, horas: 30, tipoContrato: 'PLAZO_FIJO' as const, fechaIngreso: '2024-03-01', afp: 'Capital', isapre: 'Fonasa', banco: 'BancoEstado' },
-    { run: '19012345-6', nombres: 'Luis', apellidos: 'Castillo Morales', tipo: 'ASISTENTE_PROFESIONAL' as const, cargo: 'Inspector General', tramo: undefined, horas: 44, tipoContrato: 'INDEFINIDO' as const, fechaIngreso: '2016-01-15', afp: 'Habitat', isapre: 'Fonasa', banco: 'Santander' },
-    { run: '20123456-7', nombres: 'Verónica', apellidos: 'Araya Espinoza', tipo: 'ASISTENTE_PROFESIONAL' as const, cargo: 'Secretaria Académica', tramo: undefined, horas: 44, tipoContrato: 'INDEFINIDO' as const, fechaIngreso: '2019-08-01', afp: 'PlanVital', isapre: 'Fonasa', banco: 'Chile' },
-  ];
+  const funcionariosData = cfg.funcionarios;
 
   const funcionarios: any[] = [];
   for (let i = 0; i < funcionariosData.length; i++) {
@@ -175,7 +175,7 @@ async function main() {
 
   // Link docente user to first funcionario
   await prisma.usuario.update({
-    where: { email: 'docente@sanandres.cl' },
+    where: { email: cfg.emails.docente },
     update: { funcionarioId: funcionarios[0].id },
   } as any).catch(() => {});
 
@@ -202,16 +202,7 @@ async function main() {
   console.log(`✅ Asignaturas: ${asignaturas.length}`);
 
   // ── 5. Cursos (8 cursos básica) ────────────────────────────────
-  const cursosData = [
-    { nombre: '1° Básico A', nivel: '1° Básico', letra: 'A', tipo: 'Educación Básica' },
-    { nombre: '2° Básico A', nivel: '2° Básico', letra: 'A', tipo: 'Educación Básica' },
-    { nombre: '3° Básico A', nivel: '3° Básico', letra: 'A', tipo: 'Educación Básica' },
-    { nombre: '4° Básico A', nivel: '4° Básico', letra: 'A', tipo: 'Educación Básica' },
-    { nombre: '5° Básico A', nivel: '5° Básico', letra: 'A', tipo: 'Educación Básica' },
-    { nombre: '6° Básico A', nivel: '6° Básico', letra: 'A', tipo: 'Educación Básica' },
-    { nombre: '7° Básico A', nivel: '7° Básico', letra: 'A', tipo: 'Educación Básica' },
-    { nombre: '8° Básico A', nivel: '8° Básico', letra: 'A', tipo: 'Educación Básica' },
-  ];
+  const cursosData = cfg.cursos;
 
   const cursos: any[] = [];
   for (let i = 0; i < cursosData.length; i++) {
@@ -241,7 +232,7 @@ async function main() {
   console.log(`✅ Cursos: ${cursos.length}`);
 
   // ── 6. Alumnos (200 = 25 por curso) ───────────────────────────
-  let runCounter = 10000001;
+  let runCounter = cfg.runCounterStart;
   const allAlumnos: any[] = [];
 
   for (let ci = 0; ci < cursos.length; ci++) {
@@ -249,16 +240,16 @@ async function main() {
     const baseMatricula = ci * 25 + 1;
     const cursoAlumnos: any[] = [];
 
-    for (let ai = 0; ai < 25; ai++) {
+    for (let ai = 0; ai < cursosData[ci].alumnos; ai++) {
       const isMale = (ai + ci) % 2 === 0;
       const run = makeRUN(runCounter++);
       const nombres = isMale ? pick(NOMBRES_M) : pick(NOMBRES_F);
       const apellidoPaterno = pick(APELLIDOS);
       const apellidoMaterno = pick(APELLIDOS);
       const birthYear = 2026 - (6 + ci); // age matches grade
-      const esPIE = ai < 3; // 3 per class
-      const esPrioritario = ai < 8; // 8 per class
-      const esPreferente = ai >= 8 && ai < 13; // 5 per class
+      const esPIE = ai < cfg.piePorCurso;
+      const esPrioritario = ai < cfg.prioritarioPorCurso;
+      const esPreferente = ai >= cfg.prioritarioPorCurso && ai < cfg.prioritarioPorCurso + cfg.preferentePorCurso;
 
       const alumno = await prisma.alumno.upsert({
         where: { run },
@@ -290,14 +281,14 @@ async function main() {
   // ── 7. Apoderado (linked to first alumno) ─────────────────────
   const firstAlumno = allAlumnos[0];
   const apoderado = await prisma.apoderado.upsert({
-    where: { run: '21234567-8' },
+    where: { run: cfg.runApoderado },
     update: {},
     create: {
-      run: '21234567-8',
+      run: cfg.runApoderado,
       nombres: 'Carmen',
       apellidos: 'Pérez Morales',
       telefono: '+56 9 8765 4321',
-      email: 'apoderado@sanandres.cl',
+      email: cfg.emails.apoderado,
       ocupacion: 'Profesora',
     },
   });
@@ -315,14 +306,14 @@ async function main() {
   });
 
   const apoderadoUsuario = await prisma.usuario.upsert({
-    where: { email: 'apoderado@sanandres.cl' },
+    where: { email: cfg.emails.apoderado },
     update: {},
     create: {
-      email: 'apoderado@sanandres.cl',
+      email: cfg.emails.apoderado,
       passwordHash: apoderadoHash,
       nombre: 'Carmen',
       apellidos: 'Pérez Morales',
-      run: '21234567-8',
+      run: cfg.runApoderado,
       rol: Rol.APODERADO,
       apoderadoId: apoderado.id,
     },
@@ -415,10 +406,10 @@ async function main() {
 
   // ── 10. Fondos financieros ─────────────────────────────────────
   const fondosData = [
-    { nombre: 'Subvención General', presupuesto: 234_000_000 },
-    { nombre: 'SEP', presupuesto: 56_000_000 },
-    { nombre: 'PIE', presupuesto: 18_000_000 },
-    { nombre: 'FAEP', presupuesto: 12_000_000 },
+    { nombre: 'Subvención General', presupuesto: cfg.fondos.subvGeneral },
+    { nombre: 'SEP', presupuesto: cfg.fondos.sep },
+    { nombre: 'PIE', presupuesto: cfg.fondos.pie },
+    { nombre: 'FAEP', presupuesto: cfg.fondos.faep },
   ];
 
   const fondos: any[] = [];
@@ -887,7 +878,7 @@ async function main() {
           meta: 'Menos de 40 atrasos mensuales al finalizar el segundo semestre',
           indicador: 'Registro mensual de atrasos en sistema ERP',
           descripcion: 'Protocolo de atención temprana a alumnos con atrasos reiterados e involucramiento activo de apoderados.',
-          responsableId: funcionarios[5].id,
+          responsableId: funcionarios[5 % funcionarios.length].id,
           fechaInicio: new Date('2026-03-01'),
           fechaFin: new Date('2026-12-15'),
           presupuesto: 0,
@@ -902,7 +893,7 @@ async function main() {
           meta: 'Adquirir 30 tablets para el laboratorio de tecnología',
           indicador: 'Equipos adquiridos, inventariados y operativos',
           descripcion: 'Compra de dispositivos con fondos SEP para modernizar el laboratorio de computación y habilitar clases con tecnología.',
-          responsableId: funcionarios[6].id,
+          responsableId: funcionarios[6 % funcionarios.length].id,
           fechaInicio: new Date('2026-02-01'),
           fechaFin: new Date('2026-03-31'),
           presupuesto: 9600000,
@@ -932,7 +923,7 @@ async function main() {
           meta: 'Cero casos de bullying grave sin protocolo activado en el año',
           indicador: 'Registro de casos y activaciones de protocolo en sistema',
           descripcion: 'Difusión masiva del protocolo de convivencia, capacitación docente y talleres preventivos con alumnos.',
-          responsableId: funcionarios[5].id,
+          responsableId: funcionarios[5 % funcionarios.length].id,
           fechaInicio: new Date('2026-03-01'),
           fechaFin: new Date('2026-12-15'),
           presupuesto: 200000,
@@ -1028,7 +1019,7 @@ async function main() {
           normativaReferencia: 'Ley 20536 Art. 15',
           plazoLegal: new Date('2026-03-15'),
           estado: 'CUMPLIDO',
-          responsableId: funcionarios[5].id,
+          responsableId: funcionarios[5 % funcionarios.length].id,
         },
         {
           area: 'CONVIVENCIA',
@@ -1037,7 +1028,7 @@ async function main() {
           normativaReferencia: 'Ley 20536 Art. 16',
           plazoLegal: new Date('2026-03-31'),
           estado: 'CUMPLIDO',
-          responsableId: funcionarios[5].id,
+          responsableId: funcionarios[5 % funcionarios.length].id,
         },
         {
           area: 'INFRAESTRUCTURA',
@@ -1046,7 +1037,7 @@ async function main() {
           normativaReferencia: 'DS 594 MINSAL, DS 548 MINEDUC',
           plazoLegal: new Date('2026-04-30'),
           estado: 'PENDIENTE',
-          responsableId: funcionarios[6].id,
+          responsableId: funcionarios[6 % funcionarios.length].id,
         },
         {
           area: 'INFRAESTRUCTURA',
@@ -1065,22 +1056,22 @@ async function main() {
   }
 
   // ── Summary ────────────────────────────────────────────────────
-  console.log('\n🎉 ¡Seed completado exitosamente!');
+  console.log(`\n🎉 ¡Seed completado exitosamente! [tenant: ${tenantId}]`);
   console.log('==========================================');
   console.log('Usuarios de prueba:');
   console.log('  admin@flowmind.cl        / Admin1234!     (SUPER_ADMIN)');
-  console.log('  director@sanandres.cl    / Director123!   (DIRECTOR)');
-  console.log('  docente@sanandres.cl     / Docente123!    (DOCENTE)');
-  console.log('  apoderado@sanandres.cl   / Apoderado123!  (APODERADO)');
+  console.log(`  ${cfg.emails.director.padEnd(25)} / Director123!   (DIRECTOR)`);
+  console.log(`  ${cfg.emails.docente.padEnd(25)} / Docente123!    (DOCENTE)`);
+  console.log(`  ${cfg.emails.apoderado.padEnd(25)} / Apoderado123!  (APODERADO)`);
   console.log('==========================================');
   console.log(`Resumen de datos:`);
-  console.log(`  - 8 cursos (1° a 8° Básico A)`);
-  console.log(`  - ${allAlumnos.length} alumnos (25 por curso)`);
-  console.log(`  - ${notasCreadas} notas en 3 asignaturas (4 eval × 200 alumnos)`);
-  console.log(`  - ${asistCreadas} registros de asistencia (20 días × 200 alumnos)`);
+  console.log(`  - ${cursos.length} cursos`);
+  console.log(`  - ${allAlumnos.length} alumnos`);
+  console.log(`  - ${notasCreadas} notas en 3 asignaturas`);
+  console.log(`  - ${asistCreadas} registros de asistencia`);
   console.log(`  - 50 atrasos, 10 anotaciones convivencia`);
   console.log(`  - 20 leccionarios (10 firmados, 10 pendientes)`);
-  console.log(`  - 7 funcionarios, 3 liquidaciones marzo 2026`);
+  console.log(`  - ${funcionarios.length} funcionarios, 3 liquidaciones marzo 2026`);
   console.log(`  - 5 proveedores con contratos`);
   console.log(`  - 30 bienes inventario (TEC, MOB, AF, FUNGIBLE)`);
   console.log(`  - 4 eventos calendario 2026`);
@@ -1094,4 +1085,4 @@ main()
     console.error(e);
     process.exit(1);
   })
-  .finally(() => prisma.$disconnect());
+  .finally(async () => { await prisma.$disconnect(); });
