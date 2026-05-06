@@ -1,0 +1,66 @@
+# ═══════════════════════════════════════════════════════════════
+# Flowmind School ERP — API Production Dockerfile
+# Multi-stage: builder → runner
+# ═══════════════════════════════════════════════════════════════
+
+# ── Stage 1: Builder ─────────────────────────────────────────
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+# Install build dependencies
+RUN apk add --no-cache python3 make g++
+
+# Copy workspace manifests first for cache efficiency
+COPY package.json package-lock.json ./
+COPY packages/shared/package.json ./packages/shared/
+COPY apps/api/package.json ./apps/api/
+
+# Install all dependencies (including devDependencies for build)
+RUN npm ci --workspace=apps/api --workspace=packages/shared --include-workspace-root
+
+# Copy source
+COPY packages/shared/ ./packages/shared/
+COPY apps/api/ ./apps/api/
+
+# Build shared package
+RUN npm run build --workspace=packages/shared 2>/dev/null || true
+
+# Generate Prisma client and build API
+WORKDIR /app/apps/api
+RUN npx prisma generate
+RUN npm run build
+
+# ── Stage 2: Runner ──────────────────────────────────────────
+FROM node:20-alpine AS runner
+
+WORKDIR /app
+
+# Security: run as non-root user
+RUN addgroup -g 1001 -S nodejs && adduser -S nestjs -u 1001
+
+# Install only production OS deps
+RUN apk add --no-cache dumb-init
+
+# Copy built artifacts
+COPY --from=builder /app/apps/api/dist ./dist
+COPY --from=builder /app/apps/api/prisma ./prisma
+COPY --from=builder /app/apps/api/package.json ./package.json
+
+# Copy node_modules (production only)
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/packages ./packages
+
+# Copy Prisma generated client
+COPY --from=builder /app/apps/api/node_modules/.prisma ./node_modules/.prisma
+COPY --from=builder /app/apps/api/node_modules/@prisma ./node_modules/@prisma
+
+USER nestjs
+
+EXPOSE 3000
+
+ENV NODE_ENV=production
+
+# dumb-init handles PID 1 signals properly
+ENTRYPOINT ["dumb-init", "--"]
+CMD ["node", "dist/main"]

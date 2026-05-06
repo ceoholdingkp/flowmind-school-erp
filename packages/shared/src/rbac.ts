@@ -99,6 +99,22 @@ export const PERMISSIONS = {
   'calendario:read':            'Ver eventos del calendario',
   'calendario:write':           'Crear/editar eventos',
 
+  // ─── ACADÉMICO V2 ────────────────────────────────────────────
+  'academico:read':             'Ver evaluaciones y libro de notas',
+  'academico:write':            'Crear evaluaciones e ingresar notas',
+
+  // ─── REMUNERACIONES V2 ───────────────────────────────────────
+  'remuneraciones:read':        'Ver liquidaciones de sueldo y resúmenes',
+  'remuneraciones:write':       'Generar, aprobar y pagar liquidaciones',
+
+  // ─── COMUNICACIONES ──────────────────────────────────────────
+  'comunicaciones:read':        'Ver comunicados y mensajes',
+  'comunicaciones:write':       'Crear y enviar comunicados y mensajes',
+
+  // ─── EDE / LIBRO DIGITAL ─────────────────────────────────────
+  'ede:read':                   'Ver estado EDE, validar datos y firmas',
+  'ede:write':                  'Exportar JSON EDE y firmar con OTP',
+
   // ─── MATRÍCULA Y SUBVENCIÓN ──────────────────────────────
   'matricula:read':             'Ver matrículas y proyección de subvención',
   'matricula:write':            'Gestionar matrículas',
@@ -113,6 +129,9 @@ export const PERMISSIONS = {
   'portal:pagos':               'Ver estado de cuenta y pagar',
   'portal:mensajes':            'Enviar/recibir mensajes',
   'portal:calendario':          'Ver eventos públicos',
+
+  // ─── ONBOARDING ──────────────────────────────────────────────
+  'onboarding:write':           'Crear y configurar nuevos colegios',
 } as const;
 
 export type Permission = keyof typeof PERMISSIONS;
@@ -135,6 +154,7 @@ export const ROLE_PERMISSIONS: Record<string, Permission[]> = {
     'cumplimiento:read',
     'calendario:read',
     'sistema:config:read',
+    'onboarding:write',
   ],
 
   DIRECTOR: [
@@ -142,15 +162,20 @@ export const ROLE_PERMISSIONS: Record<string, Permission[]> = {
     'sistema:config:read', 'sistema:config:write', 'sistema:usuarios:read', 'sistema:usuarios:write',
     'sistema:cursos:read', 'sistema:cursos:write', 'sistema:asignaturas:read', 'sistema:asignaturas:write',
     'alumnos:read', 'alumnos:write', 'alumnos:retirar', 'alumnos:import', 'alumnos:export:sige',
+    'matricula:read', 'matricula:write',
     'asistencia:read', 'asistencia:dashboard', 'asistencia:export',
     'atrasos:read',
     'notas:read:all', 'notas:dashboard', 'notas:bloquear', 'notas:export',
+    'academico:read', 'academico:write',
     'convivencia:read', 'convivencia:protocolos',
     'leccionario:read', 'leccionario:revision',
     'finanzas:read', 'finanzas:eer', 'finanzas:presupuesto:read', 'finanzas:presupuesto:write',
     'finanzas:rendicion', 'finanzas:rendicion:aprobar', 'finanzas:pagos:read', 'finanzas:proveedores',
     'rrhh:funcionarios:read', 'rrhh:funcionarios:write', 'rrhh:marcas:read',
     'rrhh:liquidaciones:read', 'rrhh:liquidaciones:aprobar', 'rrhh:contratos:read', 'rrhh:contratos:write',
+    'remuneraciones:read', 'remuneraciones:write',
+    'comunicaciones:read', 'comunicaciones:write',
+    'ede:read', 'ede:write',
     'inventario:read', 'inventario:write', 'inventario:baja',
     'pme:read', 'pme:write', 'pme:aprobar',
     'cumplimiento:read', 'cumplimiento:write', 'cumplimiento:fiscalizacion',
@@ -163,9 +188,12 @@ export const ROLE_PERMISSIONS: Record<string, Permission[]> = {
     'asistencia:read', 'asistencia:dashboard',
     'atrasos:read',
     'notas:read:all', 'notas:dashboard', 'notas:bloquear', 'notas:export', 'notas:import',
+    'academico:read', 'academico:write',
     'convivencia:read',
     'leccionario:read', 'leccionario:revision',
     'pme:read', 'pme:write',
+    'comunicaciones:read', 'comunicaciones:write',
+    'ede:read',
     'calendario:read', 'calendario:write',
     'sistema:cursos:read', 'sistema:asignaturas:read', 'sistema:asignaturas:write',
   ],
@@ -176,6 +204,7 @@ export const ROLE_PERMISSIONS: Record<string, Permission[]> = {
     'asistencia:read', 'asistencia:write', 'asistencia:dashboard',
     'atrasos:read', 'atrasos:write',
     'convivencia:read', 'convivencia:write', 'convivencia:protocolos',
+    'comunicaciones:read',
     'leccionario:read',
     'calendario:read',
   ],
@@ -184,6 +213,9 @@ export const ROLE_PERMISSIONS: Record<string, Permission[]> = {
     'alumnos:read',
     'asistencia:read', 'asistencia:write',
     'notas:read', 'notas:write',
+    'academico:read', 'academico:write',
+    'comunicaciones:read', 'comunicaciones:write',
+    'ede:read', 'ede:write',
     'convivencia:read', 'convivencia:write',
     'leccionario:read', 'leccionario:write',
     'calendario:read',
@@ -194,6 +226,9 @@ export const ROLE_PERMISSIONS: Record<string, Permission[]> = {
     'asistencia:read', 'asistencia:write', 'asistencia:dashboard',
     'atrasos:read',
     'notas:read', 'notas:write',
+    'academico:read', 'academico:write',
+    'comunicaciones:read', 'comunicaciones:write',
+    'ede:read', 'ede:write',
     'convivencia:read', 'convivencia:write',
     'leccionario:read', 'leccionario:write',
     'calendario:read',
@@ -214,6 +249,7 @@ export const ROLE_PERMISSIONS: Record<string, Permission[]> = {
     'finanzas:conciliacion', 'finanzas:rendicion', 'finanzas:pagos:read', 'finanzas:pagos:write', 'finanzas:proveedores',
     'rrhh:funcionarios:read', 'rrhh:funcionarios:write', 'rrhh:marcas:read', 'rrhh:marcas:write',
     'rrhh:liquidaciones:read', 'rrhh:liquidaciones:write', 'rrhh:contratos:read', 'rrhh:contratos:write', 'rrhh:export',
+    'remuneraciones:read', 'remuneraciones:write',
     'inventario:read', 'inventario:write', 'inventario:baja', 'inventario:import', 'inventario:export',
     'cumplimiento:read', 'cumplimiento:write',
     'calendario:read', 'calendario:write',
@@ -221,6 +257,7 @@ export const ROLE_PERMISSIONS: Record<string, Permission[]> = {
 
   SECRETARIA: [
     'alumnos:read', 'alumnos:write', 'alumnos:import', 'alumnos:export:sige',
+    'matricula:read', 'matricula:write',
     'asistencia:read',
     'notas:read:all',
     'atrasos:read',
@@ -230,6 +267,7 @@ export const ROLE_PERMISSIONS: Record<string, Permission[]> = {
 
   APODERADO: [
     'portal:notas', 'portal:asistencia', 'portal:pagos', 'portal:mensajes', 'portal:calendario',
+    'comunicaciones:read',
   ],
 
   ALUMNO_ROL: [

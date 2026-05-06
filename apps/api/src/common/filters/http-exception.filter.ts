@@ -31,6 +31,9 @@ export class HttpExceptionFilter implements ExceptionFilter {
           details = resp['message'] as unknown[];
           message = 'Datos de validación inválidos';
         }
+        if (Array.isArray(resp['errors'])) {
+          details = resp['errors'] as unknown[];
+        }
         code = resp['error'] as string || 'HTTP_ERROR';
       } else {
         message = exResponse as string;

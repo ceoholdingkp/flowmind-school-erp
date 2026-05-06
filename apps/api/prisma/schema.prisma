@@ -237,59 +237,59 @@ enum TipoDia {
 // ─── SISTEMA Y CONFIGURACIÓN ─────────────────────────────────
 
 model Establecimiento {
-  id                 String              @id @default(uuid())
-  nombre             String
-  rbd                String              @unique
-  direccion          String
-  comuna             String
-  region             String
-  telefono           String?
-  email              String?
-  sostenedorRut      String
-  sostenedorNombre   String
-  tipo               TipoEstablecimiento
-  logo               String?
-  anioEscolarActivo  Int
-  periodoEvaluacion  PeriodoEval         @default(SEMESTRAL)
-  escalaMin          Decimal             @default(1.0)
-  escalaMax          Decimal             @default(7.0)
-  notaAprobacion     Decimal             @default(4.0)
-  asistenciaMinima   Decimal             @default(85.0)
-  createdAt          DateTime            @default(now())
-  updatedAt          DateTime            @updatedAt
+  id                String              @id @default(uuid())
+  nombre            String
+  rbd               String              @unique
+  direccion         String
+  comuna            String
+  region            String
+  telefono          String?
+  email             String?
+  sostenedorRut     String
+  sostenedorNombre  String
+  tipo              TipoEstablecimiento
+  logo              String?
+  anioEscolarActivo Int
+  periodoEvaluacion PeriodoEval         @default(SEMESTRAL)
+  escalaMin         Decimal             @default(1.0)
+  escalaMax         Decimal             @default(7.0)
+  notaAprobacion    Decimal             @default(4.0)
+  asistenciaMinima  Decimal             @default(85.0)
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime            @updatedAt
 
-  cursos      Curso[]
-  salas       Sala[]
-  fondos      Fondo[]
-  eventos     Evento[]
+  cursos  Curso[]
+  salas   Sala[]
+  fondos  Fondo[]
+  eventos Evento[]
 }
 
 model Usuario {
-  id             String        @id @default(uuid())
-  email          String        @unique
-  passwordHash   String
-  nombre         String
-  apellidos      String
-  run            String?       @unique
-  rol            Rol
-  estado         EstadoUsuario @default(ACTIVO)
-  ultimoLogin    DateTime?
-  refreshToken   String?
-  funcionarioId  String?       @unique
-  funcionario    Funcionario?  @relation(fields: [funcionarioId], references: [id])
-  apoderadoId    String?       @unique
-  apoderado      Apoderado?    @relation(fields: [apoderadoId], references: [id])
-  createdAt      DateTime      @default(now())
-  updatedAt      DateTime      @updatedAt
+  id            String        @id @default(uuid())
+  email         String        @unique
+  passwordHash  String
+  nombre        String
+  apellidos     String
+  run           String?       @unique
+  rol           Rol
+  estado        EstadoUsuario @default(ACTIVO)
+  ultimoLogin   DateTime?
+  refreshToken  String?
+  funcionarioId String?       @unique
+  funcionario   Funcionario?  @relation(fields: [funcionarioId], references: [id])
+  apoderadoId   String?       @unique
+  apoderado     Apoderado?    @relation(fields: [apoderadoId], references: [id])
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
 }
 
 model Sala {
-  id                String          @id @default(uuid())
+  id                String           @id @default(uuid())
   nombre            String
   capacidad         Int?
-  tipo              String          @default("aula") // aula, laboratorio, gimnasio, oficina, bodega
+  tipo              String           @default("aula") // aula, laboratorio, gimnasio, oficina, bodega
   establecimientoId String
-  establecimiento   Establecimiento @relation(fields: [establecimientoId], references: [id])
+  establecimiento   Establecimiento  @relation(fields: [establecimientoId], references: [id])
   horarioBloques    HorarioBloque[]
   bienes            BienInventario[]
 }
@@ -326,17 +326,26 @@ model Alumno {
   colegioAnterior      String?
   motivoRetiro         String?
   fechaRetiro          DateTime?
-  deletedAt            DateTime?       // soft delete
+  deletedAt            DateTime? // soft delete
 
-  apoderados   ApoderadoAlumno[]
-  notas        Nota[]
-  asistencias  Asistencia[]
-  atrasos      Atraso[]
-  anotaciones  Anotacion[]
-  pagos        Pago[]
-  fichaNEE     FichaNEE?
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+  puebloOriginario     String?
+  seguroEscolar        Boolean         @default(true)
+  activo               Boolean         @default(true)
+
+  apoderados          ApoderadoAlumno[]
+  notas               Nota[]
+  notasEval           NotaEval[]
+  asistencias         Asistencia[]
+  atrasos             Atraso[]
+  anotaciones         Anotacion[]
+  pagos               Pago[]
+  fichaNEE            FichaNEE?
+  matriculas          Matricula[]
+  contactosEmergencia ContactoEmergencia[]
+  documentos          DocumentoAlumno[]
+  mensajesIndividuales MensajeIndividual[]
+  createdAt           DateTime          @default(now())
+  updatedAt           DateTime          @updatedAt
 
   @@index([cursoId])
   @@index([estadoMatricula])
@@ -344,31 +353,95 @@ model Alumno {
 }
 
 model Apoderado {
-  id        String            @id @default(uuid())
-  run       String            @unique
-  nombres   String
-  apellidos String
-  telefono  String
-  email     String?
-  direccion String?
-  ocupacion String?
-  alumnos   ApoderadoAlumno[]
-  usuario   Usuario?
-  createdAt DateTime          @default(now())
-  updatedAt DateTime          @updatedAt
+  id              String            @id @default(uuid())
+  run             String            @unique
+  nombres         String
+  apellidos       String
+  apellidoPaterno String?
+  apellidoMaterno String?
+  telefono        String
+  telefonoAlt     String?
+  email           String?
+  direccion       String?
+  comuna          String?
+  ocupacion       String?
+  parentesco      String?
+  // Portal directo (auth por RUT + contraseña propia)
+  passwordHash    String?
+  ultimoAcceso    DateTime?
+  activo          Boolean           @default(true)
+  alumnos         ApoderadoAlumno[]
+  usuario         Usuario?
+  lecturas        LecturaComunicado[]
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
 }
 
 model ApoderadoAlumno {
-  id           String    @id @default(uuid())
-  alumnoId     String
-  alumno       Alumno    @relation(fields: [alumnoId], references: [id])
-  apoderadoId  String
-  apoderado    Apoderado @relation(fields: [apoderadoId], references: [id])
-  parentesco   String
-  esTitular    Boolean   @default(false)
-  esEmergencia Boolean   @default(false)
+  id             String    @id @default(uuid())
+  alumnoId       String
+  alumno         Alumno    @relation(fields: [alumnoId], references: [id])
+  apoderadoId    String
+  apoderado      Apoderado @relation(fields: [apoderadoId], references: [id])
+  parentesco     String
+  esTitular      Boolean   @default(false)
+  esEmergencia   Boolean   @default(false)
+  tipo           String?   // TITULAR, SUPLENTE, ECONOMICO
+  esRetiraAlumno Boolean   @default(false)
 
   @@unique([alumnoId, apoderadoId])
+}
+
+model Matricula {
+  id              String    @id @default(uuid())
+  alumnoId        String
+  alumno          Alumno    @relation(fields: [alumnoId], references: [id])
+  anio            Int
+  curso           String
+  nivel           String
+  cursoId         String?
+  cursoRel        Curso?    @relation(fields: [cursoId], references: [id])
+  estado          String    @default("VIGENTE")
+  numeroMatricula Int?
+  fechaMatricula  DateTime  @default(now())
+  fechaRetiro     DateTime?
+  motivoRetiro    String?
+  procedencia     String?
+  becaPorcentaje  Float     @default(0)
+  prioritario     Boolean   @default(false)
+  preferente      Boolean   @default(false)
+  pie             Boolean   @default(false)
+  pieDiagnostico  String?
+  repitente       Boolean   @default(false)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@unique([alumnoId, anio])
+  @@map("matricula_v2")
+}
+
+model ContactoEmergencia {
+  id         String  @id @default(uuid())
+  alumnoId   String
+  alumno     Alumno  @relation(fields: [alumnoId], references: [id])
+  nombre     String
+  telefono   String
+  parentesco String
+  prioridad  Int     @default(1)
+
+  @@map("contacto_emergencia")
+}
+
+model DocumentoAlumno {
+  id         String   @id @default(uuid())
+  alumnoId   String
+  alumno     Alumno   @relation(fields: [alumnoId], references: [id])
+  tipo       String
+  nombre     String
+  archivoUrl String
+  createdAt  DateTime @default(now())
+
+  @@map("documento_alumno")
 }
 
 model Funcionario {
@@ -396,16 +469,18 @@ model Funcionario {
   estado            EstadoFuncionario @default(ACTIVO)
   deletedAt         DateTime?
 
-  usuario              Usuario?
-  cursosJefatura       Curso[]             @relation("DocenteJefe")
+  usuario               Usuario?
+  cursosJefatura        Curso[]             @relation("DocenteJefe")
   asignaturasImpartidas AsignaturaDocente[]
-  leccionarios         Leccionario[]
-  liquidaciones        Liquidacion[]
-  contratos            ContratoLaboral[]
-  marcasAsistencia     MarcaAsistencia[]
-  bienesResponsable    BienInventario[]
-  createdAt            DateTime            @default(now())
-  updatedAt            DateTime            @updatedAt
+  leccionarios          Leccionario[]
+  liquidaciones         Liquidacion[]
+  liquidacionesSueldo   LiquidacionSueldo[]
+  contratos             ContratoLaboral[]
+  marcasAsistencia      MarcaAsistencia[]
+  bienesResponsable     BienInventario[]
+  firmasLibro           FirmaLibroClases[]
+  createdAt             DateTime            @default(now())
+  updatedAt             DateTime            @updatedAt
 
   @@index([tipo])
   @@index([estado])
@@ -429,6 +504,10 @@ model Curso {
   alumnos        Alumno[]
   horarioBloques HorarioBloque[]
   asistencias    Asistencia[]
+  matriculas     Matricula[]
+  evaluaciones   Evaluacion[]
+  comunicados    Comunicado[]
+  firmasLibro    FirmaLibroClases[]
 
   @@unique([nombre, anio, establecimientoId])
   @@index([anio])
@@ -440,9 +519,13 @@ model Asignatura {
   codigo         String? @unique
   horasSemanales Int
   planEstudios   String?
+  tipo           String  @default("ASIGNATURA") // ASIGNATURA, TALLER, ELECTIVO
+  activa         Boolean @default(true)
+  createdAt      DateTime @default(now())
 
-  docentes AsignaturaDocente[]
-  notas    Nota[]
+  docentes      AsignaturaDocente[]
+  notas         Nota[]
+  evaluaciones  Evaluacion[]
 }
 
 model AsignaturaDocente {
@@ -458,18 +541,18 @@ model AsignaturaDocente {
 }
 
 model HorarioBloque {
-  id            String  @id @default(uuid())
-  cursoId       String
-  curso         Curso   @relation(fields: [cursoId], references: [id])
-  salaId        String?
-  sala          Sala?   @relation(fields: [salaId], references: [id])
-  diaSemana     Int     // 1=Lunes ... 5=Viernes
-  bloqueNumero  Int     // 1-8
-  horaInicio    String  // "08:00"
-  horaFin       String  // "08:45"
-  asignaturaId  String?
-  docenteId     String?
-  anio          Int
+  id           String  @id @default(uuid())
+  cursoId      String
+  curso        Curso   @relation(fields: [cursoId], references: [id])
+  salaId       String?
+  sala         Sala?   @relation(fields: [salaId], references: [id])
+  diaSemana    Int // 1=Lunes ... 5=Viernes
+  bloqueNumero Int // 1-8
+  horaInicio   String // "08:00"
+  horaFin      String // "08:45"
+  asignaturaId String?
+  docenteId    String?
+  anio         Int
 
   @@unique([cursoId, diaSemana, bloqueNumero, anio])
   @@unique([salaId, diaSemana, bloqueNumero, anio])
@@ -498,21 +581,62 @@ model Nota {
   @@index([alumnoId, asignaturaId, anio, semestre])
 }
 
+// ─── MÓDULO ACADÉMICO V2 ─────────────────────────────────────
+
+model Evaluacion {
+  id              String    @id @default(uuid())
+  asignaturaId    String
+  cursoId         String
+  nombre          String
+  tipo            String    // PRUEBA, TRABAJO, TAREA, EXPOSICION, EXAMEN
+  ponderacion     Float
+  fechaAplicacion DateTime?
+  semestre        Int
+  anio            Int
+  estado          String    @default("ABIERTA") // ABIERTA, CERRADA
+  createdAt       DateTime  @default(now())
+
+  asignatura      Asignatura @relation(fields: [asignaturaId], references: [id])
+  curso           Curso      @relation(fields: [cursoId], references: [id])
+  notasEval       NotaEval[]
+
+  @@index([cursoId, asignaturaId, semestre, anio])
+  @@map("evaluacion")
+}
+
+model NotaEval {
+  id            String   @id @default(uuid())
+  evaluacionId  String
+  alumnoId      String
+  valor         Float
+  observacion   String?
+  registradoPor String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  evaluacion    Evaluacion @relation(fields: [evaluacionId], references: [id])
+  alumno        Alumno     @relation(fields: [alumnoId], references: [id])
+
+  @@unique([evaluacionId, alumnoId])
+  @@index([alumnoId])
+  @@map("nota_eval")
+}
+
 model Asistencia {
-  id             String           @id @default(uuid())
-  alumnoId       String
-  alumno         Alumno           @relation(fields: [alumnoId], references: [id])
-  cursoId        String
-  curso          Curso            @relation(fields: [cursoId], references: [id])
-  fecha          DateTime
-  tramoHorario   Int?
-  estado         EstadoAsistencia
-  horaLlegada    DateTime?
-  horaRetiro     DateTime?
-  justificacion  String?
-  documentoAdj   String?
-  registradoPor  String
-  createdAt      DateTime         @default(now())
+  id            String           @id @default(uuid())
+  alumnoId      String
+  alumno        Alumno           @relation(fields: [alumnoId], references: [id])
+  cursoId       String
+  curso         Curso            @relation(fields: [cursoId], references: [id])
+  fecha         DateTime
+  tramoHorario  Int?
+  estado        EstadoAsistencia
+  horaLlegada   DateTime?
+  horaRetiro    DateTime?
+  justificacion String?
+  documentoAdj  String?
+  registradoPor String
+  createdAt     DateTime         @default(now())
 
   @@unique([alumnoId, fecha, tramoHorario])
   @@index([cursoId, fecha])
@@ -520,19 +644,19 @@ model Asistencia {
 }
 
 model Atraso {
-  id                    String     @id @default(uuid())
-  alumnoId              String
-  alumno                Alumno     @relation(fields: [alumnoId], references: [id])
-  fecha                 DateTime
-  horaLlegada           DateTime
-  minutosAtraso         Int
-  bloqueHorario         Int
-  tipo                  TipoAtraso
-  justificado           Boolean    @default(false)
-  justificacion         String?
-  registradoPor         String
-  notificacionEnviada   Boolean    @default(false)
-  createdAt             DateTime   @default(now())
+  id                  String     @id @default(uuid())
+  alumnoId            String
+  alumno              Alumno     @relation(fields: [alumnoId], references: [id])
+  fecha               DateTime
+  horaLlegada         DateTime
+  minutosAtraso       Int
+  bloqueHorario       Int
+  tipo                TipoAtraso
+  justificado         Boolean    @default(false)
+  justificacion       String?
+  registradoPor       String
+  notificacionEnviada Boolean    @default(false)
+  createdAt           DateTime   @default(now())
 
   @@index([alumnoId, fecha])
 }
@@ -550,8 +674,8 @@ model Anotacion {
   fecha           DateTime
   registradaPor   String
   protocoloActivo String?
-  entrevistas     Json?         // [{fecha, apoderado, acuerdos, firma}]
-  compromisos     Json?         // [{descripcion, fechaLimite, estado, seguimiento}]
+  entrevistas     Json? // [{fecha, apoderado, acuerdos, firma}]
+  compromisos     Json? // [{descripcion, fechaLimite, estado, seguimiento}]
   visiblePortal   Boolean       @default(true)
   createdAt       DateTime      @default(now())
 
@@ -560,24 +684,24 @@ model Anotacion {
 }
 
 model Leccionario {
-  id               String            @id @default(uuid())
-  cursoId          String
-  asignaturaId     String
-  docenteId        String
-  docente          Funcionario       @relation(fields: [docenteId], references: [id])
-  fecha            DateTime
-  bloqueHorario    Int
-  horaInicio       String?
-  horaFin          String?
-  objetivo         String?
-  contenido        String
-  actividades      String?
-  recursos         String?
-  observaciones    String?
-  firmaDigital     DateTime?
-  estado           EstadoLeccionario @default(PENDIENTE)
-  planificacionId  String?
-  createdAt        DateTime          @default(now())
+  id              String            @id @default(uuid())
+  cursoId         String
+  asignaturaId    String
+  docenteId       String
+  docente         Funcionario       @relation(fields: [docenteId], references: [id])
+  fecha           DateTime
+  bloqueHorario   Int
+  horaInicio      String?
+  horaFin         String?
+  objetivo        String?
+  contenido       String
+  actividades     String?
+  recursos        String?
+  observaciones   String?
+  firmaDigital    DateTime?
+  estado          EstadoLeccionario @default(PENDIENTE)
+  planificacionId String?
+  createdAt       DateTime          @default(now())
 
   @@index([docenteId, fecha])
   @@index([cursoId, fecha])
@@ -598,13 +722,13 @@ model FichaNEE {
 // ─── FINANZAS ────────────────────────────────────────────────
 
 model Fondo {
-  id                String          @id @default(uuid())
+  id                String                 @id @default(uuid())
   nombre            String
   presupuestoAnual  Decimal
   anio              Int
-  activo            Boolean         @default(true)
+  activo            Boolean                @default(true)
   establecimientoId String
-  establecimiento   Establecimiento @relation(fields: [establecimientoId], references: [id])
+  establecimiento   Establecimiento        @relation(fields: [establecimientoId], references: [id])
   movimientos       MovimientoFinanciero[]
   rendiciones       Rendicion[]
   presupuestos      PresupuestoLinea[]
@@ -613,12 +737,12 @@ model Fondo {
 }
 
 model MovimientoFinanciero {
-  id                    String       @id @default(uuid())
+  id                    String           @id @default(uuid())
   tipo                  TipoMovimiento
   categoria             String
   subcategoria          String?
   fondoId               String?
-  fondo                 Fondo?       @relation(fields: [fondoId], references: [id])
+  fondo                 Fondo?           @relation(fields: [fondoId], references: [id])
   monto                 Decimal
   fecha                 DateTime
   mes                   Int
@@ -627,114 +751,117 @@ model MovimientoFinanciero {
   documentoTributarioId String?
   numeroFactura         String?
   rutProveedor          String?
-  fuenteDato            FuenteDato   @default(MANUAL)
-  conciliado            Boolean      @default(false)
+  fuenteDato            FuenteDato       @default(MANUAL)
+  conciliado            Boolean          @default(false)
   conciliacionId        String?
-  createdAt             DateTime     @default(now())
+  supereducCuentaCodigo String?
+  supereducCuenta       SupereducCuenta? @relation(fields: [supereducCuentaCodigo], references: [codigo])
+  createdAt             DateTime         @default(now())
 
   @@index([fondoId, anio, mes])
   @@index([tipo, anio, mes])
 }
 
 model Pago {
-  id          String     @id @default(uuid())
-  alumnoId    String
-  alumno      Alumno     @relation(fields: [alumnoId], references: [id])
-  monto       Decimal
-  fecha       DateTime
-  metodo      MetodoPago
-  referencia  String?
-  estado      EstadoPago @default(PENDIENTE)
-  descripcion String?
-  cuotaNumero Int?
+  id             String     @id @default(uuid())
+  alumnoId       String
+  alumno         Alumno     @relation(fields: [alumnoId], references: [id])
+  monto          Decimal
+  fecha          DateTime
+  metodo         MetodoPago
+  referencia     String?
+  estado         EstadoPago @default(PENDIENTE)
+  descripcion    String?
+  cuotaNumero    Int?
   mesCorresponde Int?
-  createdAt   DateTime   @default(now())
-  updatedAt   DateTime   @updatedAt
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime   @updatedAt
 
   @@index([alumnoId, estado])
 }
 
 model Conciliacion {
-  id              String   @id @default(uuid())
-  cuentaBancaria  String
-  mes             Int
-  anio            Int
-  archivoOriginal String?
-  totalMovBanco   Int
-  totalConciliados Int     @default(0)
-  totalPendientes Int      @default(0)
-  diferencia      Decimal  @default(0)
-  estado          String   @default("EN_PROCESO") // EN_PROCESO, COMPLETADA
-  realizadaPor    String
+  id                String    @id @default(uuid())
+  cuentaBancaria    String
+  mes               Int
+  anio              Int
+  archivoOriginal   String?
+  totalMovBanco     Int
+  totalConciliados  Int       @default(0)
+  totalPendientes   Int       @default(0)
+  diferencia        Decimal   @default(0)
+  estado            String    @default("EN_PROCESO") // EN_PROCESO, COMPLETADA
+  realizadaPor      String
   fechaConciliacion DateTime?
-  detalles        Json?    // [{movBanco, movERP, estado}]
-  createdAt       DateTime @default(now())
+  detalles          Json? // [{movBanco, movERP, estado}]
+  createdAt         DateTime  @default(now())
 }
 
 model Rendicion {
-  id                String          @id @default(uuid())
-  fondoId           String
-  fondo             Fondo           @relation(fields: [fondoId], references: [id])
-  periodo           String          // "mensual", "trimestral", "anual"
-  mesInicio         Int
-  mesFin            Int
-  anio              Int
-  totalIngresos     Decimal
-  totalGastos       Decimal
-  saldo             Decimal
-  estado            EstadoRendicion @default(BORRADOR)
-  fechaEnvio        DateTime?
+  id                     String          @id @default(uuid())
+  fondoId                String
+  fondo                  Fondo           @relation(fields: [fondoId], references: [id])
+  periodo                String // "mensual", "trimestral", "anual"
+  mesInicio              Int
+  mesFin                 Int
+  anio                   Int
+  totalIngresos          Decimal
+  totalGastos            Decimal
+  saldo                  Decimal
+  estado                 EstadoRendicion @default(BORRADOR)
+  fechaEnvio             DateTime?
   observacionesSuperEduc String?
-  aprobadoPor       String?
-  archivoGenerado   String?
-  createdAt         DateTime        @default(now())
-  updatedAt         DateTime        @updatedAt
+  aprobadoPor            String?
+  archivoGenerado        String?
+  createdAt              DateTime        @default(now())
+  updatedAt              DateTime        @updatedAt
 }
 
 model Presupuesto {
-  id          String            @id @default(uuid())
-  anio        Int
-  estado      EstadoPresupuesto @default(BORRADOR)
-  aprobadoPor String?
+  id              String             @id @default(uuid())
+  anio            Int
+  estado          EstadoPresupuesto  @default(BORRADOR)
+  aprobadoPor     String?
   fechaAprobacion DateTime?
-  lineas      PresupuestoLinea[]
-  createdAt   DateTime          @default(now())
-  updatedAt   DateTime          @updatedAt
+  lineas          PresupuestoLinea[]
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
 
   @@unique([anio])
 }
 
 model PresupuestoLinea {
-  id                String      @id @default(uuid())
-  presupuestoId     String
-  presupuesto       Presupuesto @relation(fields: [presupuestoId], references: [id])
-  fondoId           String
-  fondo             Fondo       @relation(fields: [fondoId], references: [id])
-  categoriaGasto    String
-  montoAnual        Decimal
-  montoMensual      Json?       // [m1, m2, ..., m12]
+  id             String      @id @default(uuid())
+  presupuestoId  String
+  presupuesto    Presupuesto @relation(fields: [presupuestoId], references: [id])
+  fondoId        String
+  fondo          Fondo       @relation(fields: [fondoId], references: [id])
+  categoriaGasto String
+  montoAnual     Decimal
+  montoMensual   Json? // [m1, m2, ..., m12]
 }
 
 model Proveedor {
-  id             String   @id @default(uuid())
-  rut            String   @unique
-  razonSocial    String
-  giro           String?
-  direccion      String?
-  telefono       String?
-  email          String?
-  contactoNombre String?
-  cuentaBancaria String?
-  banco          String?
-  contratos      ContratoProveedor[]
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
+  id               String                      @id @default(uuid())
+  rut              String                      @unique
+  razonSocial      String
+  giro             String?
+  direccion        String?
+  telefono         String?
+  email            String?
+  contactoNombre   String?
+  cuentaBancaria   String?
+  banco            String?
+  contratos        ContratoProveedor[]
+  cuentasFrecuentes ProveedorCuentaFrecuente[]
+  createdAt        DateTime                    @default(now())
+  updatedAt        DateTime                    @updatedAt
 }
 
 model ContratoProveedor {
-  id              String    @id @default(uuid())
+  id              String         @id @default(uuid())
   proveedorId     String
-  proveedor       Proveedor @relation(fields: [proveedorId], references: [id])
+  proveedor       Proveedor      @relation(fields: [proveedorId], references: [id])
   numeroContrato  String?
   tipoServicio    String
   montoTotal      Decimal?
@@ -744,8 +871,8 @@ model ContratoProveedor {
   fondoImputacion String?
   estado          EstadoContrato @default(VIGENTE)
   documento       String?
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
 }
 
 // ─── RRHH ────────────────────────────────────────────────────
@@ -760,9 +887,9 @@ model Liquidacion {
   totalHaberes      Decimal
   totalDescuentos   Decimal
   liquidoAPago      Decimal
-  detalleHaberes    Json              // [{concepto, monto}]
-  detalleDescuentos Json              // [{concepto, monto}]
-  fondoImputacion   Json              // [{fondoId, porcentaje, monto}]
+  detalleHaberes    Json // [{concepto, monto}]
+  detalleDescuentos Json // [{concepto, monto}]
+  fondoImputacion   Json // [{fondoId, porcentaje, monto}]
   estado            EstadoLiquidacion @default(BORRADOR)
   fechaPago         DateTime?
   archivoPDF        String?
@@ -772,42 +899,93 @@ model Liquidacion {
   @@unique([funcionarioId, mes, anio])
 }
 
+// ─── REMUNERACIONES V2 ───────────────────────────────────────
+
+model LiquidacionSueldo {
+  id                 String    @id @default(uuid())
+  funcionarioId      String
+  mes                Int
+  anio               Int
+  diasTrabajados     Int       @default(30)
+
+  sueldoBase         Decimal
+  asignacionFamiliar Decimal   @default(0)
+  bonoZona           Decimal   @default(0)
+  horasExtra         Decimal   @default(0)
+  otrosHaberes       Decimal   @default(0)
+  totalHaberes       Decimal
+
+  afp                String    // AFP nombre
+  tasaAfp            Decimal   // e.g. 11.44
+  montoAfp           Decimal
+  salud              String    // FONASA | ISAPRE nombre
+  montoSalud         Decimal
+  seguroCesantia     Decimal
+  impuestoUnico      Decimal   @default(0)
+  otrosDescuentos    Decimal   @default(0)
+  totalDescuentos    Decimal
+
+  sueldoLiquido      Decimal
+
+  estado             String    @default("BORRADOR") // BORRADOR, APROBADA, PAGADA
+  fechaPago          DateTime?
+
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+
+  funcionario        Funcionario @relation(fields: [funcionarioId], references: [id])
+
+  @@unique([funcionarioId, mes, anio])
+  @@index([mes, anio])
+  @@map("liquidacion_sueldo")
+}
+
+model ConfiguracionPrevisional {
+  id       String  @id @default(uuid())
+  nombre   String  @unique // AFP_HABITAT, AFP_CUPRUM, FONASA, CESANTIA_TRABAJADOR, etc
+  tipo     String  // AFP, SALUD, SEGURO_CESANTIA
+  tasa     Decimal // porcentaje
+  vigente  Boolean @default(true)
+
+  @@map("configuracion_previsional")
+}
+
 model ContratoLaboral {
-  id              String         @id @default(uuid())
-  funcionarioId   String
-  funcionario     Funcionario    @relation(fields: [funcionarioId], references: [id])
-  tipo            TipoContrato
-  cargo           String
-  funciones       String?
-  horasSemanales  Int
-  sueldoBruto     Decimal
-  fechaInicio     DateTime
-  fechaTermino    DateTime?
-  estado          EstadoContrato @default(VIGENTE)
-  causalTermino   String?
-  documento       String?
-  finiquito       String?
-  anexos          Json?          // [{fecha, descripcion, cambios, documento}]
-  createdAt       DateTime       @default(now())
-  updatedAt       DateTime       @updatedAt
+  id             String         @id @default(uuid())
+  funcionarioId  String
+  funcionario    Funcionario    @relation(fields: [funcionarioId], references: [id])
+  tipo           TipoContrato
+  cargo          String
+  funciones      String?
+  horasSemanales Int
+  sueldoBruto    Decimal
+  fechaInicio    DateTime
+  fechaTermino   DateTime?
+  estado         EstadoContrato @default(VIGENTE)
+  causalTermino  String?
+  documento      String?
+  finiquito      String?
+  anexos         Json? // [{fecha, descripcion, cambios, documento}]
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
 }
 
 model MarcaAsistencia {
-  id             String      @id @default(uuid())
-  funcionarioId  String
-  funcionario    Funcionario @relation(fields: [funcionarioId], references: [id])
-  fecha          DateTime
-  horaEntrada    DateTime?
-  horaSalida     DateTime?
+  id              String      @id @default(uuid())
+  funcionarioId   String
+  funcionario     Funcionario @relation(fields: [funcionarioId], references: [id])
+  fecha           DateTime
+  horaEntrada     DateTime?
+  horaSalida      DateTime?
   horasTrabajadas Decimal?
-  horasExtra     Decimal?
-  atrasoMinutos  Int?
-  tipoDia        TipoDia     @default(NORMAL)
-  licenciaTipo   String?
-  licenciaDias   Int?
-  licenciaFolio  String?
-  observacion    String?
-  createdAt      DateTime    @default(now())
+  horasExtra      Decimal?
+  atrasoMinutos   Int?
+  tipoDia         TipoDia     @default(NORMAL)
+  licenciaTipo    String?
+  licenciaDias    Int?
+  licenciaFolio   String?
+  observacion     String?
+  createdAt       DateTime    @default(now())
 
   @@unique([funcionarioId, fecha])
   @@index([funcionarioId, fecha])
@@ -837,7 +1015,7 @@ model BienInventario {
   foto             String?
   motivoBaja       String?
   fechaBaja        DateTime?
-  historial        Json?         // [{fecha, tipo, detalle, usuario}]
+  historial        Json? // [{fecha, tipo, detalle, usuario}]
   createdAt        DateTime      @default(now())
   updatedAt        DateTime      @updatedAt
 
@@ -849,35 +1027,35 @@ model BienInventario {
 // ─── PME ─────────────────────────────────────────────────────
 
 model PME {
-  id              String    @id @default(uuid())
-  anio            Int       @unique
-  estado          EstadoPME @default(BORRADOR)
+  id              String      @id @default(uuid())
+  anio            Int         @unique
+  estado          EstadoPME   @default(BORRADOR)
   aprobadoPor     String?
   fechaAprobacion DateTime?
   acciones        AccionPME[]
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
 }
 
 model AccionPME {
-  id              String   @id @default(uuid())
-  pmeId           String
-  pme             PME      @relation(fields: [pmeId], references: [id])
-  dimension       String   // "Gestion Pedagogica", "Liderazgo", "Convivencia", "Gestion Recursos"
-  objetivo        String
-  meta            String?
-  indicador       String?
-  descripcion     String
-  responsableId   String?
-  fechaInicio     DateTime?
-  fechaFin        DateTime?
-  presupuesto     Decimal?
-  fondoId         String?
-  porcentajeAvance Decimal  @default(0)
-  evidencias      Json?    // [{fecha, descripcion, archivo}]
-  estado          String   @default("PENDIENTE") // PENDIENTE, EN_CURSO, COMPLETADA
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  id               String    @id @default(uuid())
+  pmeId            String
+  pme              PME       @relation(fields: [pmeId], references: [id])
+  dimension        String // "Gestion Pedagogica", "Liderazgo", "Convivencia", "Gestion Recursos"
+  objetivo         String
+  meta             String?
+  indicador        String?
+  descripcion      String
+  responsableId    String?
+  fechaInicio      DateTime?
+  fechaFin         DateTime?
+  presupuesto      Decimal?
+  fondoId          String?
+  porcentajeAvance Decimal   @default(0)
+  evidencias       Json? // [{fecha, descripcion, archivo}]
+  estado           String    @default("PENDIENTE") // PENDIENTE, EN_CURSO, COMPLETADA
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
 }
 
 // ─── CUMPLIMIENTO ────────────────────────────────────────────
@@ -898,17 +1076,17 @@ model ItemCumplimiento {
 }
 
 model Fiscalizacion {
-  id               String   @id @default(uuid())
-  fecha            DateTime
-  entidad          String   // "SuperEduc", "DT", "Mineduc"
-  fiscalizador     String?
-  hallazgos        String?
-  compromisos      String?
-  plazoSubsanacion DateTime?
+  id                String    @id @default(uuid())
+  fecha             DateTime
+  entidad           String // "SuperEduc", "DT", "Mineduc"
+  fiscalizador      String?
+  hallazgos         String?
+  compromisos       String?
+  plazoSubsanacion  DateTime?
   estadoSubsanacion String? // "PENDIENTE", "SUBSANADO", "VENCIDO"
-  documentos       Json?    // [{nombre, url}]
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+  documentos        Json? // [{nombre, url}]
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
 }
 
 // ─── CALENDARIO ──────────────────────────────────────────────
@@ -919,8 +1097,8 @@ model Evento {
   descripcion       String?
   fechaInicio       DateTime
   fechaFin          DateTime?
-  categoria         String          // "academico", "administrativo", "financiero", "comunitario"
-  recurrencia       String?         // "ninguna", "diaria", "semanal", "mensual", "anual"
+  categoria         String // "academico", "administrativo", "financiero", "comunitario"
+  recurrencia       String? // "ninguna", "diaria", "semanal", "mensual", "anual"
   audiencia         String          @default("todos") // "todos", "docentes", "apoderados", "administrativos"
   ubicacion         String?
   color             String?
@@ -937,8 +1115,8 @@ model EventoAuditoria {
   id           String   @id @default(uuid())
   timestamp    DateTime @default(now())
   usuarioId    String
-  accion       String   // "CREATE", "UPDATE", "DELETE"
-  entidad      String   // "Alumno", "Nota", "Pago", etc.
+  accion       String // "CREATE", "UPDATE", "DELETE"
+  entidad      String // "Alumno", "Nota", "Pago", etc.
   entidadId    String
   datosAntes   Json?
   datosDespues Json?
@@ -953,31 +1131,169 @@ model EventoAuditoria {
 // ─── IMPORTACIONES ───────────────────────────────────────────
 
 model ImportacionArchivo {
-  id              String   @id @default(uuid())
-  modulo          String   // "alumnos", "notas", "inventario", "cartola"
-  nombreArchivo   String
-  archivoUrl      String?
-  totalFilas      Int
-  filasExitosas   Int      @default(0)
-  filasConError   Int      @default(0)
-  errores         Json?    // [{fila, columna, error}]
-  estado          String   @default("PROCESANDO") // PROCESANDO, COMPLETADO, CON_ERRORES, FALLIDO
-  importadoPor    String
-  createdAt       DateTime @default(now())
+  id            String   @id @default(uuid())
+  modulo        String // "alumnos", "notas", "inventario", "cartola"
+  nombreArchivo String
+  archivoUrl    String?
+  totalFilas    Int
+  filasExitosas Int      @default(0)
+  filasConError Int      @default(0)
+  errores       Json? // [{fila, columna, error}]
+  estado        String   @default("PROCESANDO") // PROCESANDO, COMPLETADO, CON_ERRORES, FALLIDO
+  importadoPor  String
+  createdAt     DateTime @default(now())
 }
 
 // ─── ALERTAS ─────────────────────────────────────────────────
 
 model Alerta {
-  id             String          @id @default(uuid())
-  tipo           String          // "financiera", "academica", "operativa", "laboral"
-  severidad      SeveridadAlerta
-  titulo         String
-  descripcion    String?
-  moduloDestino  String?
-  urlDestino     String?
-  estado         String          @default("ACTIVA") // ACTIVA, RESUELTA, DESCARTADA
-  resueltaPor    String?
+  id              String          @id @default(uuid())
+  tipo            String // "financiera", "academica", "operativa", "laboral"
+  severidad       SeveridadAlerta
+  titulo          String
+  descripcion     String?
+  moduloDestino   String?
+  urlDestino      String?
+  estado          String          @default("ACTIVA") // ACTIVA, RESUELTA, DESCARTADA
+  resueltaPor     String?
   fechaResolucion DateTime?
-  createdAt      DateTime        @default(now())
+  createdAt       DateTime        @default(now())
+}
+
+// ─── RENDICIÓN SUPEREDUC ────────────────────────────────────────
+
+model SupereducCuenta {
+  id                  String                      @id @default(uuid())
+  codigo              String                      @unique
+  nombre              String
+  tipo                String // GASTO | INGRESO | AJUSTE
+  esAgrupadora        Boolean                     @default(false)
+  codigoPadre         String?
+  padre               SupereducCuenta?            @relation("CuentaHija", fields: [codigoPadre], references: [codigo])
+  hijas               SupereducCuenta[]           @relation("CuentaHija")
+  subvenciones        SupereducCuentaSubvencion[]
+  documentos          SupereducCuentaDocumento[]
+  movimientos         MovimientoFinanciero[]
+  proveedoresFrecuentes ProveedorCuentaFrecuente[]
+  createdAt           DateTime                    @default(now())
+  updatedAt           DateTime                    @updatedAt
+
+  @@map("supereduc_cuenta")
+}
+
+model SupereducCuentaSubvencion {
+  id         String          @id @default(uuid())
+  cuentaId   String
+  cuenta     SupereducCuenta @relation(fields: [cuentaId], references: [id])
+  subvencion String // GENERAL, SEP, PIE, PRO_RETENCION, etc
+
+  @@unique([cuentaId, subvencion])
+  @@map("supereduc_cuenta_subvencion")
+}
+
+model SupereducCuentaDocumento {
+  id       String          @id @default(uuid())
+  cuentaId String
+  cuenta   SupereducCuenta @relation(fields: [cuentaId], references: [id])
+  tipoDoc  String // BOL, BOLE, FAC, FACE, BHE, etc
+
+  @@unique([cuentaId, tipoDoc])
+  @@map("supereduc_cuenta_documento")
+}
+
+model ProveedorCuentaFrecuente {
+  id           String          @id @default(uuid())
+  proveedorId  String
+  cuentaCodigo String
+  frecuencia   Int             @default(1)
+  ultimoUso    DateTime        @default(now())
+  createdAt    DateTime        @default(now())
+
+  proveedor    Proveedor       @relation(fields: [proveedorId], references: [id])
+  cuenta       SupereducCuenta @relation(fields: [cuentaCodigo], references: [codigo])
+
+  @@unique([proveedorId, cuentaCodigo])
+  @@map("proveedor_cuenta_frecuente")
+}
+
+// ─── COMUNICACIONES ───────────────────────────────────────────
+
+model Comunicado {
+  id              String    @id @default(uuid())
+  titulo          String
+  contenido       String
+  tipo            String    // CIRCULAR, AVISO, REUNION, EMERGENCIA, ACADEMICO
+  prioridad       String    @default("NORMAL") // BAJA, NORMAL, ALTA, URGENTE
+  destinatarios   String    // TODOS, CURSO, NIVEL, INDIVIDUAL
+  cursoId         String?
+  enviadoPor      String
+  fechaEnvio      DateTime  @default(now())
+  fechaExpiracion DateTime?
+  estado          String    @default("ENVIADO") // BORRADOR, ENVIADO, ARCHIVADO
+  adjuntoUrl      String?
+  createdAt       DateTime  @default(now())
+
+  lecturas        LecturaComunicado[]
+  curso           Curso?    @relation(fields: [cursoId], references: [id])
+
+  @@index([fechaEnvio])
+  @@index([tipo, estado])
+  @@map("comunicado")
+}
+
+model LecturaComunicado {
+  id                 String    @id @default(uuid())
+  comunicadoId       String
+  apoderadoId        String
+  leido              Boolean   @default(false)
+  fechaLectura       DateTime?
+  confirmado         Boolean   @default(false)
+  fechaConfirmacion  DateTime?
+
+  comunicado  Comunicado @relation(fields: [comunicadoId], references: [id])
+  apoderado   Apoderado  @relation(fields: [apoderadoId], references: [id])
+
+  @@unique([comunicadoId, apoderadoId])
+  @@index([apoderadoId])
+  @@map("lectura_comunicado")
+}
+
+model MensajeIndividual {
+  id             String   @id @default(uuid())
+  alumnoId       String
+  remitente      String   // userId
+  destinatarioId String   // apoderadoId
+  asunto         String
+  contenido      String
+  leido          Boolean  @default(false)
+  fechaLectura   DateTime?
+  respuesta      String?
+  fechaRespuesta DateTime?
+  createdAt      DateTime @default(now())
+
+  alumno         Alumno   @relation(fields: [alumnoId], references: [id])
+
+  @@index([alumnoId])
+  @@index([destinatarioId])
+  @@map("mensaje_individual")
+}
+
+// ─── LIBRO DE CLASES DIGITAL / EDE ───────────────────────────
+
+model FirmaLibroClases {
+  id            String      @id @default(uuid())
+  funcionarioId String
+  cursoId       String
+  fecha         DateTime    @db.Date
+  tipo          String      // ASISTENCIA, CLASE, EVALUACION
+  otpValidado   Boolean     @default(false)
+  ipSolicitante String?
+  createdAt     DateTime    @default(now())
+
+  funcionario   Funcionario @relation(fields: [funcionarioId], references: [id])
+  curso         Curso       @relation(fields: [cursoId], references: [id])
+
+  @@unique([funcionarioId, cursoId, fecha, tipo])
+  @@index([cursoId, fecha])
+  @@map("firma_libro_clases")
 }

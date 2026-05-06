@@ -1,0 +1,53 @@
+# ═══════════════════════════════════════════════════════════════
+# Flowmind School ERP — Web Production Dockerfile
+# Multi-stage: builder → nginx
+# ═══════════════════════════════════════════════════════════════
+
+# ── Stage 1: Builder ─────────────────────────────────────────
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+# Copy workspace manifests
+COPY package.json package-lock.json ./
+COPY packages/shared/package.json ./packages/shared/
+COPY apps/web/package.json ./apps/web/
+
+# Install dependencies
+RUN npm ci --workspace=apps/web --workspace=packages/shared --include-workspace-root
+
+# Copy source
+COPY packages/shared/ ./packages/shared/
+COPY apps/web/ ./apps/web/
+
+# Build shared package
+RUN npm run build --workspace=packages/shared 2>/dev/null || true
+
+# Build Vite app
+WORKDIR /app/apps/web
+RUN npm run build
+
+# ── Stage 2: Nginx ───────────────────────────────────────────
+FROM nginx:1.27-alpine AS runner
+
+# Remove default nginx config
+RUN rm /etc/nginx/conf.d/default.conf
+
+# Add SPA nginx config
+COPY --from=builder /app/apps/web/nginx.conf /etc/nginx/conf.d/default.conf
+
+# Copy built static files
+COPY --from=builder /app/apps/web/dist /usr/share/nginx/html
+
+# Security: run nginx as non-root
+RUN chown -R nginx:nginx /usr/share/nginx/html && \
+    chown -R nginx:nginx /var/cache/nginx && \
+    chown -R nginx:nginx /var/log/nginx && \
+    touch /var/run/nginx.pid && \
+    chown nginx:nginx /var/run/nginx.pid
+
+USER nginx
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

@@ -280,9 +280,9 @@ async function main() {
 
   // ── 7. Apoderado (linked to first alumno) ─────────────────────
   const firstAlumno = allAlumnos[0];
-  const apoderado = await prisma.apoderado.upsert({
+  const apoderado = await (prisma.apoderado as any).upsert({
     where: { run: cfg.runApoderado },
-    update: {},
+    update: { passwordHash: apoderadoHash, activo: true },
     create: {
       run: cfg.runApoderado,
       nombres: 'Carmen',
@@ -290,6 +290,8 @@ async function main() {
       telefono: '+56 9 8765 4321',
       email: cfg.emails.apoderado,
       ocupacion: 'Profesora',
+      passwordHash: apoderadoHash,
+      activo: true,
     },
   });
 
