@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Patch, Body, Param, Query, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Patch, Body, Param, Query, UseGuards, ParseUUIDPipe } from '@nestjs/common';
 import { ProveedoresService } from '../proveedores.service';
 import { CreateProveedorDto, UpdateProveedorDto, CreateContratoDto, ProveedorQueryDto } from '../dto/proveedores.dto';
 import { JwtAuthGuard } from '../../../common/guards/jwt-auth.guard';
@@ -51,5 +51,20 @@ export class ProveedoresController {
   @Permissions('finanzas:proveedores')
   createContrato(@Param('id') id: string, @Body() dto: CreateContratoDto, @CurrentUser() user: any) {
     return this.proveedoresService.createContrato(id, dto, user.sub);
+  }
+
+  @Get(':id/cuentas-frecuentes')
+  @Permissions('finanzas:rendicion')
+  getCuentasFrecuentes(@Param('id') id: string) {
+    return this.proveedoresService.getCuentasFrecuentes(id);
+  }
+
+  @Post(':id/cuentas-frecuentes')
+  @Permissions('finanzas:rendicion')
+  asociarCuenta(
+    @Param('id') id: string,
+    @Body('cuentaCodigo') cuentaCodigo: string,
+  ) {
+    return this.proveedoresService.asociarCuentaFrecuente(id, cuentaCodigo);
   }
 }

@@ -195,4 +195,65 @@ export class ProveedoresService {
       },
     };
   }
+
+  // ─── CUENTAS FRECUENTES SUPEREDUC ────────────────────────────
+
+  async getCuentasFrecuentes(proveedorId: string) {
+    const proveedor = await this.db.proveedor.findUnique({ where: { id: proveedorId } });
+    if (!proveedor) throw new NotFoundException(`Proveedor ${proveedorId} no encontrado`);
+
+    const frecuentes = await this.db.proveedorCuentaFrecuente.findMany({
+      where: { proveedorId },
+      include: {
+        cuenta: {
+          select: {
+            codigo: true,
+            nombre: true,
+            tipo: true,
+            subvenciones: { select: { subvencion: true } },
+            documentos: { select: { tipoDoc: true } },
+          },
+        },
+      },
+      orderBy: [{ frecuencia: 'desc' }, { ultimoUso: 'desc' }],
+    });
+
+    return {
+      data: frecuentes.map(f => ({
+        id: f.id,
+        frecuencia: f.frecuencia,
+        ultimoUso: f.ultimoUso,
+        cuenta: f.cuenta,
+      })),
+    };
+  }
+
+  async asociarCuentaFrecuente(proveedorId: string, cuentaCodigo: string) {
+    const proveedor = await this.db.proveedor.findUnique({ where: { id: proveedorId } });
+    if (!proveedor) throw new NotFoundException(`Proveedor ${proveedorId} no encontrado`);
+
+    const cuenta = await this.db.supereducCuenta.findUnique({ where: { codigo: cuentaCodigo } });
+    if (!cuenta) throw new NotFoundException(`Cuenta ${cuentaCodigo} no encontrada`);
+    if (cuenta.esAgrupadora) throw new NotFoundException(`Cuenta ${cuentaCodigo} es agrupadora`);
+
+    const registro = await this.db.proveedorCuentaFrecuente.upsert({
+      where: { proveedorId_cuentaCodigo: { proveedorId, cuentaCodigo } },
+      update: { frecuencia: { increment: 1 }, ultimoUso: new Date() },
+      create: { proveedorId, cuentaCodigo, frecuencia: 1 },
+    });
+
+    return { data: registro };
+  }
+
+  async trackCuentaUsada(proveedorId: string, cuentaCodigo: string) {
+    try {
+      await this.db.proveedorCuentaFrecuente.upsert({
+        where: { proveedorId_cuentaCodigo: { proveedorId, cuentaCodigo } },
+        update: { frecuencia: { increment: 1 }, ultimoUso: new Date() },
+        create: { proveedorId, cuentaCodigo, frecuencia: 1 },
+      });
+    } catch {
+      // Non-blocking: tracking failure should not affect the main flow
+    }
+  }
 }

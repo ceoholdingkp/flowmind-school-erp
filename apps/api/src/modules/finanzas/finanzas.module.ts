@@ -1,6 +1,9 @@
 import { Module } from '@nestjs/common';
 import { MulterModule } from '@nestjs/platform-express';
 
+// Sub-modules
+import { RendicionSupereducModule } from './rendicion/rendicion.module';
+
 // Services
 import { FondosService } from './fondos.service';
 import { MovimientosService } from './movimientos.service';
@@ -23,6 +26,7 @@ import { PagosController } from './controllers/pagos.controller';
 @Module({
   imports: [
     MulterModule.register({ limits: { fileSize: 10 * 1024 * 1024 } }), // 10MB limit
+    RendicionSupereducModule,
   ],
   controllers: [
     FondosController,
