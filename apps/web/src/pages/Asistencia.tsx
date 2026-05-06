@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Save, RefreshCw, CheckCircle, XCircle, Clock, FileText, Download } from 'lucide-react';
+import { Save, RefreshCw, CheckCircle, XCircle, Clock, FileText, Download, Loader2 } from 'lucide-react';
 import api from '../api/client';
 import { exportToCSV } from '../utils/export';
+import { useToastStore } from '../store/toast.store';
 
 interface Curso { id: string; nombre: string; nivel: string; letra: string; }
 interface Alumno { id: string; run: string; nombres: string; apellidoPaterno: string; apellidoMaterno: string; }
@@ -15,6 +16,7 @@ const ESTADO_OPTS = [
 ] as const;
 
 export default function Asistencia() {
+  const toast = useToastStore();
   const [cursos, setCursos] = useState<Curso[]>([]);
   const [cursoId, setCursoId] = useState('');
   const [alumnos, setAlumnos] = useState<Alumno[]>([]);
@@ -59,9 +61,10 @@ export default function Asistencia() {
       }));
       await api.post('/asistencia/bulk', { registros });
       setSaved(true);
+      toast.success('Asistencia guardada exitosamente');
       setTimeout(() => setSaved(false), 3000);
-    } catch (e) {
-      console.error(e);
+    } catch (e: any) {
+      toast.error(e?.response?.data?.error?.message ?? 'Error al guardar la asistencia');
     } finally {
       setSaving(false);
     }
@@ -106,7 +109,7 @@ export default function Asistencia() {
               disabled={saving}
               className="flex items-center gap-2 bg-[#10b981] hover:bg-[#059669] disabled:opacity-60 text-white text-sm px-4 py-2 rounded-lg transition-colors"
             >
-              {saving ? <RefreshCw size={14} className="animate-spin" /> : <Save size={14} />}
+              {saving ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
               {saved ? '¡Guardado!' : 'Guardar registro'}
             </button>
           </div>

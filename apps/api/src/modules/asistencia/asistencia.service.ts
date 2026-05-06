@@ -54,38 +54,50 @@ export class AsistenciaService {
       throw new BadRequestException('Algunos alumnos no están matriculados activamente');
     }
 
-    // Check for duplicates
+    // Find existing records for this batch (use actual userId from JWT as registradoPor)
+    const registradoPor = usuarioId;
+    const fechaStart = new Date(fecha); fechaStart.setHours(0, 0, 0, 0);
+    const fechaEnd = new Date(fecha); fechaEnd.setHours(23, 59, 59, 999);
+
     const existing = await this.db.asistencia.findMany({
       where: {
         alumnoId: { in: alumnoIds },
-        fecha,
+        fecha: { gte: fechaStart, lte: fechaEnd },
         tramoHorario: dto.tramoHorario ?? null,
       },
+      select: { id: true, alumnoId: true },
     });
-    if (existing.length > 0) {
-      throw new ConflictException(
-        `Ya existe registro de asistencia para esta fecha${dto.tramoHorario ? ` y tramo ${dto.tramoHorario}` : ''}`,
-      );
-    }
+    const existingMap = new Map((existing as any[]).map((e) => [e.alumnoId, e.id]));
 
-    // Register all in a single transaction
+    // Register all in a single transaction (upsert: update if exists, create if not)
     const registros = await this.db.$transaction(async (tx: any) => {
       const created = await Promise.all(
-        dto.registros.map((r) =>
-          tx.asistencia.create({
+        dto.registros.map((r) => {
+          const existingId = existingMap.get(r.alumnoId);
+          if (existingId) {
+            return tx.asistencia.update({
+              where: { id: existingId },
+              data: {
+                estado: r.estado,
+                justificacion: r.justificacion ?? null,
+                horaLlegada: r.horaLlegada ? new Date(r.horaLlegada) : null,
+                registradoPor,
+              },
+            });
+          }
+          return tx.asistencia.create({
             data: {
               alumnoId: r.alumnoId,
               cursoId: dto.cursoId,
-              fecha,
+              fecha: fechaStart,
               tramoHorario: dto.tramoHorario ?? null,
               estado: r.estado,
               justificacion: r.justificacion ?? null,
               horaLlegada: r.horaLlegada ? new Date(r.horaLlegada) : null,
-              horaRetiro: r.horaRetiro ? new Date(r.horaRetiro) : null,
-              registradoPor: dto.registradoPor,
+              registradoPor,
             },
-          }),
-        ),
+          });
+        }),
       );
 
       await tx.eventoAuditoria.create({
@@ -513,5 +525,196 @@ export class AsistenciaService {
     const wb = xlsx.utils.book_new();
     xlsx.utils.book_append_sheet(wb, ws, `Asistencia ${mesStr}-${anio}`);
     return xlsx.write(wb, { type: 'buffer', bookType: 'xlsx' }) as Buffer;
+  }
+
+  // ─── RESUMEN DIARIO ────────────────────────────────────────────
+
+  async getResumenDiario(fecha?: string) {
+    const fechaConsulta = fecha ? new Date(fecha) : new Date();
+    const diaStart = new Date(fechaConsulta); diaStart.setHours(0, 0, 0, 0);
+    const diaEnd = new Date(fechaConsulta); diaEnd.setHours(23, 59, 59, 999);
+    const anioActual = diaStart.getFullYear();
+
+    const cursos = await this.db.curso.findMany({
+      where: { anio: anioActual },
+      select: { id: true, nombre: true, nivel: true },
+      orderBy: { nombre: 'asc' },
+    });
+
+    const porCurso = await Promise.all(
+      cursos.map(async (c: any) => {
+        const registros = await this.db.asistencia.findMany({
+          where: { cursoId: c.id, fecha: { gte: diaStart, lte: diaEnd }, tramoHorario: null },
+          select: { estado: true },
+        });
+        const total = registros.length;
+        const presentes = registros.filter((r: any) => ['PRESENTE', 'ATRASO', 'JUSTIFICADO'].includes(r.estado)).length;
+        return {
+          cursoId: c.id, cursoNombre: c.nombre, nivel: c.nivel,
+          total, presentes,
+          ausentes: registros.filter((r: any) => r.estado === 'AUSENTE').length,
+          atrasados: registros.filter((r: any) => r.estado === 'ATRASO').length,
+          justificados: registros.filter((r: any) => r.estado === 'JUSTIFICADO').length,
+          porcentaje: total > 0 ? Math.round((presentes / total) * 100) : null,
+          registrado: total > 0,
+        };
+      }),
+    );
+
+    const totalRegistros = porCurso.reduce((s, c) => s + c.total, 0);
+    const totalPresentes = porCurso.reduce((s, c) => s + c.presentes, 0);
+
+    return {
+      data: {
+        fecha: diaStart.toISOString().split('T')[0],
+        porcentajeGeneral: totalRegistros > 0 ? Math.round((totalPresentes / totalRegistros) * 100 * 10) / 10 : null,
+        totalAlumnos: totalRegistros,
+        totalPresentes,
+        cursosSinRegistrar: porCurso.filter((c) => !c.registrado).length,
+        porCurso,
+      },
+    };
+  }
+
+  // ─── RESUMEN MENSUAL ───────────────────────────────────────────
+
+  async getResumenMensual(mes: number, anio: number) {
+    const mesStr = String(mes).padStart(2, '0');
+    const fechaInicio = new Date(`${anio}-${mesStr}-01T00:00:00`);
+    const fechaFin = new Date(anio, mes, 0, 23, 59, 59, 999); // last day
+
+    const cursos = await this.db.curso.findMany({
+      where: { anio },
+      select: { id: true, nombre: true, nivel: true },
+      orderBy: { nombre: 'asc' },
+    });
+
+    const porCurso = await Promise.all(
+      cursos.map(async (c: any) => {
+        const registros = await this.db.asistencia.findMany({
+          where: { cursoId: c.id, fecha: { gte: fechaInicio, lte: fechaFin }, tramoHorario: null },
+          select: { estado: true, alumnoId: true, fecha: true },
+        });
+        const alumnosUnicos = new Set(registros.map((r: any) => r.alumnoId)).size;
+        const diasUnicos = new Set(
+          registros.map((r: any) => r.fecha.toISOString().split('T')[0]),
+        ).size;
+        const totalPresencias = registros.filter((r: any) =>
+          ['PRESENTE', 'ATRASO', 'JUSTIFICADO'].includes(r.estado),
+        ).length;
+        const totalAusencias = registros.filter((r: any) => r.estado === 'AUSENTE').length;
+        const porcentaje = registros.length > 0
+          ? Math.round((totalPresencias / registros.length) * 100 * 10) / 10
+          : null;
+        return {
+          cursoId: c.id, cursoNombre: c.nombre, nivel: c.nivel,
+          totalAlumnos: alumnosUnicos, registrosDias: diasUnicos,
+          totalPresencias, totalAusencias, porcentaje,
+        };
+      }),
+    );
+
+    const totalAll = porCurso.reduce((s, c) => s + c.totalPresencias + c.totalAusencias, 0);
+    const presAll = porCurso.reduce((s, c) => s + c.totalPresencias, 0);
+    const porcentajeGeneral = totalAll > 0 ? Math.round((presAll / totalAll) * 100 * 10) / 10 : null;
+
+    const conDatos = porCurso.filter((c) => c.registrosDias > 0);
+    const mejorCurso = conDatos.length > 0
+      ? conDatos.reduce((a, b) => ((a.porcentaje ?? 0) > (b.porcentaje ?? 0) ? a : b)).cursoNombre
+      : null;
+    const peorCurso = conDatos.length > 0
+      ? conDatos.reduce((a, b) => ((a.porcentaje ?? 100) < (b.porcentaje ?? 100) ? a : b)).cursoNombre
+      : null;
+
+    const totalDias = conDatos.length > 0
+      ? Math.max(...conDatos.map((c) => c.registrosDias))
+      : 0;
+
+    const alertas = porCurso
+      .filter((c) => c.porcentaje !== null && c.porcentaje < 85)
+      .map((c) => ({
+        tipo: 'CURSO_BAJO_UMBRAL',
+        mensaje: `Curso ${c.cursoNombre} tiene ${c.porcentaje}% de asistencia`,
+        cursoId: c.cursoId,
+      }));
+
+    return {
+      data: {
+        mes, anio, totalDias, porcentajeGeneral,
+        mejorCurso, peorCurso,
+        porCurso,
+        alertas,
+      },
+    };
+  }
+
+  // ─── ALERTAS DE ASISTENCIA ─────────────────────────────────────
+
+  async getAlertasAsistencia() {
+    const hoy = new Date();
+    const lunesEstaSemana = new Date(hoy);
+    lunesEstaSemana.setDate(hoy.getDate() - ((hoy.getDay() + 6) % 7)); // Monday
+    lunesEstaSemana.setHours(0, 0, 0, 0);
+
+    const cursos = await this.db.curso.findMany({
+      where: { anio: hoy.getFullYear() },
+      select: { id: true, nombre: true, nivel: true },
+    });
+
+    const alertas: any[] = [];
+
+    // Check courses below 85% this week
+    for (const c of cursos) {
+      const registros = await this.db.asistencia.findMany({
+        where: { cursoId: c.id, fecha: { gte: lunesEstaSemana }, tramoHorario: null },
+        select: { estado: true },
+      });
+      if (registros.length === 0) continue;
+      const presentes = registros.filter((r: any) =>
+        ['PRESENTE', 'ATRASO', 'JUSTIFICADO'].includes(r.estado),
+      ).length;
+      const pct = Math.round((presentes / registros.length) * 100);
+      if (pct < 85) {
+        alertas.push({
+          tipo: 'CURSO_BAJO_UMBRAL_SEMANAL',
+          mensaje: `Curso ${c.nombre} tiene ${pct}% de asistencia esta semana`,
+          cursoId: c.id,
+          porcentaje: pct,
+          severidad: pct < 75 ? 'error' : 'warning',
+        });
+      }
+    }
+
+    // Find students with 3+ consecutive absences (last 5 days)
+    const hace5Dias = new Date(hoy); hace5Dias.setDate(hoy.getDate() - 6);
+    hace5Dias.setHours(0, 0, 0, 0);
+
+    const ausenciasRecientes = await this.db.asistencia.groupBy({
+      by: ['alumnoId'],
+      where: {
+        fecha: { gte: hace5Dias },
+        tramoHorario: null,
+        estado: 'AUSENTE',
+      },
+      _count: { id: true },
+      having: { id: { _count: { gte: 3 } } },
+    });
+
+    for (const a of ausenciasRecientes) {
+      const alumno = await this.db.alumno.findFirst({
+        where: { id: (a as any).alumnoId, deletedAt: null },
+        select: { nombres: true, apellidoPaterno: true, curso: { select: { nombre: true } } },
+      });
+      if (!alumno) continue;
+      alertas.push({
+        tipo: 'ALUMNO_INASISTENCIA_REITERADA',
+        mensaje: `${alumno.nombres} ${alumno.apellidoPaterno} tiene ${(a as any)._count.id}+ inasistencias esta semana`,
+        alumnoId: (a as any).alumnoId,
+        cursoNombre: (alumno as any).curso?.nombre ?? '',
+        severidad: 'warning',
+      });
+    }
+
+    return { data: alertas };
   }
 }

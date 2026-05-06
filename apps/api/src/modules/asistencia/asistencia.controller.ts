@@ -22,6 +22,29 @@ export class AsistenciaController {
     return this.asistenciaService.registrarBulk(dto, user.sub);
   }
 
+  @Get('resumen/diario')
+  @Permissions('asistencia:read')
+  getResumenDiario(@Query('fecha') fecha?: string) {
+    return this.asistenciaService.getResumenDiario(fecha);
+  }
+
+  @Get('resumen/mensual')
+  @Permissions('asistencia:read')
+  getResumenMensual(
+    @Query('mes') mes: string,
+    @Query('anio') anio: string,
+  ) {
+    const mesNum = parseInt(mes ?? String(new Date().getMonth() + 1), 10);
+    const anioNum = parseInt(anio ?? String(new Date().getFullYear()), 10);
+    return this.asistenciaService.getResumenMensual(mesNum, anioNum);
+  }
+
+  @Get('alertas')
+  @Permissions('asistencia:read')
+  getAlertasAsistencia() {
+    return this.asistenciaService.getAlertasAsistencia();
+  }
+
   @Get('dashboard')
   @Permissions('asistencia:dashboard')
   getDashboard() {
