@@ -35,6 +35,12 @@ export class AlumnosController {
     res.send(buffer);
   }
 
+  @Get(':id/historial')
+  @Permissions('alumnos:read')
+  getHistorial(@Param('id') id: string) {
+    return this.alumnosService.getHistorial(id);
+  }
+
   @Get(':id')
   @Permissions('alumnos:read')
   findOne(@Param('id') id: string) {

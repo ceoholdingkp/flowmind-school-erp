@@ -48,14 +48,26 @@ export class AlumnosService {
 
   // ─── LISTADO ──────────────────────────────────────────────────
 
+  async getHistorial(id: string) {
+    const alumno = await this.db.alumno.findFirst({ where: { id, deletedAt: null } });
+    if (!alumno) throw new NotFoundException(`Alumno ${id} no encontrado`);
+    const matriculas = await this.db.matricula.findMany({
+      where: { alumnoId: id },
+      include: { cursoRel: { select: { id: true, nombre: true, nivel: true } } },
+      orderBy: { anio: 'desc' },
+    });
+    return { data: matriculas };
+  }
+
   async findAll(query: AlumnoQueryDto) {
-    const { q, cursoId, estado, page = 1, limit = 20 } = query;
+    const { q, cursoId, nivel, estado, page = 1, limit = 20 } = query;
     const skip = (page - 1) * limit;
 
     const where: Record<string, unknown> = { deletedAt: null };
     if (estado) where['estadoMatricula'] = estado;
     else where['estadoMatricula'] = 'ACTIVA';
     if (cursoId) where['cursoId'] = cursoId;
+    if (nivel) where['curso'] = { nivel: { contains: nivel, mode: 'insensitive' } };
     if (q) {
       where['OR'] = [
         { run: { contains: q, mode: 'insensitive' } },

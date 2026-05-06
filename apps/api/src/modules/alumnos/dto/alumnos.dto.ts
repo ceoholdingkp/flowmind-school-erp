@@ -88,6 +88,7 @@ export class CreateApoderadoDto {
 export class AlumnoQueryDto {
   @IsOptional() @IsString() q?: string;
   @IsOptional() @IsString() cursoId?: string;
+  @IsOptional() @IsString() nivel?: string;
   @IsOptional() @IsEnum(EstadoMatriculaEnum) estado?: EstadoMatriculaEnum;
   @IsOptional() @IsInt() @Min(1) @Type(() => Number) page?: number;
   @IsOptional() @IsInt() @Min(1) @Max(100) @Type(() => Number) limit?: number;
