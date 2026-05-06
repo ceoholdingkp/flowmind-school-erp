@@ -16,6 +16,18 @@ export class DashboardController {
     return this.dashboardService.getKPIs();
   }
 
+  @Get('director')
+  @Permissions('dashboard:read')
+  getDirectorDashboard() {
+    return this.dashboardService.getDirectorDashboard();
+  }
+
+  @Get('actividad-reciente')
+  @Permissions('dashboard:read')
+  getActividadReciente(@Query('limit') limit: string | undefined) {
+    return this.dashboardService.getActividadReciente(limit ? parseInt(limit, 10) : 10);
+  }
+
   @Get('alertas')
   @Permissions('dashboard:alertas')
   getAlertas(@Query('estado') estado: string | undefined) {
