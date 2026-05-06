@@ -5,6 +5,8 @@ import {
   Heart, BookMarked, DollarSign, TrendingUp, FileText, Truck,
   CreditCard, UserCheck, Clock, Banknote, CalendarDays, Target,
   Package, ShieldCheck, School, ChevronDown, ChevronRight, Menu, X, LogOut,
+  ListTree, PlusCircle, Receipt, BarChart2,
+  UserPlus, List, PieChart, MessageSquare, Mail, BookCheck, KeyRound, Settings2,
 } from 'lucide-react';
 import { useUIStore } from '../store/ui.store';
 import { useAuthStore } from '../store/auth.store';
@@ -33,7 +35,12 @@ const NAV_GROUPS: NavGroup[] = [
     icon: <Users size={18} />,
     items: [
       { label: 'Matrícula', icon: <School size={16} />, path: '/matricula' },
+      { label: 'MA: Alumnos', icon: <List size={16} />, path: '/matricula/alumnos' },
+      { label: 'MA: Nueva', icon: <UserPlus size={16} />, path: '/matricula/nuevo' },
+      { label: 'MA: Resumen', icon: <PieChart size={16} />, path: '/matricula/resumen' },
       { label: 'Asistencia', icon: <ClipboardCheck size={16} />, path: '/asistencia' },
+      { label: 'AS: Registro', icon: <ClipboardCheck size={16} />, path: '/asistencia/registro' },
+      { label: 'AS: Resumen', icon: <BarChart2 size={16} />, path: '/asistencia/resumen' },
       { label: 'Atrasos', icon: <Clock size={16} />, path: '/atrasos' },
     ],
   },
@@ -43,6 +50,8 @@ const NAV_GROUPS: NavGroup[] = [
     icon: <GraduationCap size={18} />,
     items: [
       { label: 'Calificaciones', icon: <BookOpen size={16} />, path: '/calificaciones' },
+      { label: 'AC: Libro Notas', icon: <BookOpen size={16} />, path: '/academico/notas' },
+      { label: 'AC: Informe Notas', icon: <BarChart2 size={16} />, path: '/academico/informe' },
       { label: 'Convivencia', icon: <Heart size={16} />, path: '/convivencia' },
       { label: 'Libro de Clases', icon: <BookMarked size={16} />, path: '/leccionario' },
     ],
@@ -57,6 +66,10 @@ const NAV_GROUPS: NavGroup[] = [
       { label: 'Presupuesto', icon: <FileText size={16} />, path: '/finanzas/presupuesto' },
       { label: 'Conciliación', icon: <ClipboardCheck size={16} />, path: '/finanzas/conciliacion' },
       { label: 'Rendición', icon: <FileText size={16} />, path: '/finanzas/rendicion' },
+      { label: 'RE: Plan Cuentas', icon: <ListTree size={16} />, path: '/finanzas/rendicion/cuentas' },
+      { label: 'RE: Registrar', icon: <PlusCircle size={16} />, path: '/finanzas/rendicion/movimientos/nuevo' },
+      { label: 'RE: Movimientos', icon: <Receipt size={16} />, path: '/finanzas/rendicion/movimientos' },
+      { label: 'RE: Resumen', icon: <BarChart2 size={16} />, path: '/finanzas/rendicion/resumen' },
       { label: 'Proveedores', icon: <Truck size={16} />, path: '/finanzas/proveedores' },
       { label: 'Pagos', icon: <CreditCard size={16} />, path: '/finanzas/pagos' },
     ],
@@ -68,8 +81,30 @@ const NAV_GROUPS: NavGroup[] = [
     items: [
       { label: 'Funcionarios', icon: <Users size={16} />, path: '/rrhh/funcionarios' },
       { label: 'Asistencia RR.HH.', icon: <Clock size={16} />, path: '/rrhh/asistencia' },
-      { label: 'Remuneraciones', icon: <Banknote size={16} />, path: '/rrhh/remuneraciones' },
       { label: 'Contratos', icon: <FileText size={16} />, path: '/rrhh/contratos' },
+      { label: 'Remuneraciones', icon: <Banknote size={16} />, path: '/rrhh/remuneraciones' },
+      { label: 'RE: Liquidaciones', icon: <Banknote size={16} />, path: '/remuneraciones/liquidaciones' },
+      { label: 'RE: Resumen', icon: <BarChart2 size={16} />, path: '/remuneraciones/resumen' },
+      { label: 'RE: Previred', icon: <Receipt size={16} />, path: '/remuneraciones/previred' },
+    ],
+  },
+  {
+    key: 'comunicaciones',
+    label: 'Comunicaciones',
+    icon: <MessageSquare size={18} />,
+    items: [
+      { label: 'Comunicados', icon: <MessageSquare size={16} />, path: '/comunicaciones' },
+      { label: 'Nuevo Comunicado', icon: <PlusCircle size={16} />, path: '/comunicaciones/nuevo' },
+      { label: 'Mensajes', icon: <Mail size={16} />, path: '/comunicaciones/mensajes' },
+    ],
+  },
+  {
+    key: 'libro_digital',
+    label: 'Libro Digital EDE',
+    icon: <BookCheck size={18} />,
+    items: [
+      { label: 'Panel EDE', icon: <ShieldCheck size={16} />, path: '/ede' },
+      { label: 'Firma Digital', icon: <KeyRound size={16} />, path: '/ede/firma' },
     ],
   },
   {
@@ -81,6 +116,14 @@ const NAV_GROUPS: NavGroup[] = [
       { label: 'PME', icon: <Target size={16} />, path: '/pme' },
       { label: 'Inventario', icon: <Package size={16} />, path: '/inventario' },
       { label: 'Cumplimiento', icon: <ShieldCheck size={16} />, path: '/cumplimiento' },
+    ],
+  },
+  {
+    key: 'admin',
+    label: 'Administración',
+    icon: <Settings2 size={18} />,
+    items: [
+      { label: 'Nuevo Colegio', icon: <School size={16} />, path: '/admin/onboarding' },
     ],
   },
 ];
@@ -118,16 +161,20 @@ export default function Sidebar() {
       {/* Logo / Toggle */}
       <div className="flex items-center justify-between px-3 py-4 border-b" style={{ borderColor: 'var(--border)' }}>
         {!sidebarCollapsed && (
-          <div className="flex items-center gap-2">
+          <button
+            onClick={() => { navigate('/dashboard'); onNavClick(); }}
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+          >
             <div className="w-7 h-7 bg-[#3b82f6] rounded-lg flex items-center justify-center text-xs font-bold text-white">F</div>
             <span className="font-semibold text-sm" style={{ color: 'var(--text-primary)' }}>FlowMind</span>
-          </div>
+          </button>
         )}
         {/* On desktop: collapse toggle. On mobile: close button */}
         <button
           onClick={mobileSidebarOpen ? closeMobileSidebar : toggleSidebar}
           className="p-1.5 rounded-lg transition-colors ml-auto"
           style={{ color: 'var(--muted)' }}
+          aria-label={sidebarCollapsed && !mobileSidebarOpen ? 'Expandir menú' : 'Colapsar menú'}
           onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--nav-hover)'; e.currentTarget.style.color = 'var(--text-primary)'; }}
           onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--muted)'; }}
         >
@@ -155,6 +202,9 @@ export default function Sidebar() {
               <button
                 onClick={() => !sidebarCollapsed && toggleGroup(group.key)}
                 title={group.label}
+                aria-label={group.label}
+                aria-expanded={!sidebarCollapsed ? isExpanded : undefined}
+                aria-controls={!sidebarCollapsed ? `${group.key}-items` : undefined}
                 className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors"
                 style={{ color: 'var(--muted)' }}
                 onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--nav-hover)'; e.currentTarget.style.color = 'var(--text-primary)'; }}
@@ -169,7 +219,7 @@ export default function Sidebar() {
                 )}
               </button>
               {!sidebarCollapsed && isExpanded && (
-                <div className="ml-3 pl-3 border-l space-y-0.5 mt-0.5" style={{ borderColor: 'var(--border)' }}>
+                <div id={`${group.key}-items`} className="ml-3 pl-3 border-l space-y-0.5 mt-0.5" style={{ borderColor: 'var(--border)' }}>
                   {group.items.map((item) => (
                     <NavLink key={item.path} to={item.path} className={linkClass} title={item.label} onClick={onNavClick}>
                       <span className="shrink-0">{item.icon}</span>
@@ -194,6 +244,7 @@ export default function Sidebar() {
         <button
           onClick={handleLogout}
           title="Cerrar sesión"
+          aria-label="Cerrar sesión"
           className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors"
           style={{ color: 'var(--muted)' }}
           onMouseEnter={(e) => { e.currentTarget.style.background = 'var(--nav-hover)'; e.currentTarget.style.color = '#ef4444'; }}

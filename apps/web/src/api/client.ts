@@ -30,8 +30,9 @@ api.interceptors.response.use(
       original._retry = true;
       const refreshToken = localStorage.getItem('refreshToken');
       if (!refreshToken) {
-        localStorage.clear();
-        window.location.href = '/login';
+        const { useAuthStore } = await import('../store/auth.store');
+        useAuthStore.getState().logout();
+        window.location.href = '/login?expired=1';
         return Promise.reject(error);
       }
 
@@ -55,7 +56,7 @@ api.interceptors.response.use(
         return api(original);
       } catch {
         localStorage.clear();
-        window.location.href = '/login';
+        window.location.href = '/login?expired=1';
         return Promise.reject(error);
       } finally {
         refreshing = false;

@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Header from './Header';
 import Footer from './Footer';
+import ErrorBoundary from './ErrorBoundary';
 import { useUIStore } from '../store/ui.store';
 
 export default function Layout() {
@@ -23,9 +24,11 @@ export default function Layout() {
 
       <div className={`flex flex-col flex-1 ${desktopOffset} transition-all duration-200 min-w-0`}>
         <Header />
-        <main className="flex-1 overflow-auto p-4 lg:p-6">
-          <Outlet />
-        </main>
+        <ErrorBoundary>
+          <main className="flex-1 overflow-auto p-4 lg:p-6">
+            <Outlet />
+          </main>
+        </ErrorBoundary>
         <Footer />
       </div>
     </div>

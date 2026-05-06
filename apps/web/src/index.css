@@ -51,3 +51,18 @@ body {
 ::-webkit-scrollbar-track { background: var(--sidebar); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+
+/* Accessibility */
+:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Responsive utilities */
+.table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+@media (max-width: 768px) {
+  .kpi-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .modal-content { width: 95vw !important; max-width: 95vw !important; }
+  .form-stack { flex-direction: column !important; }
+}
